@@ -27,17 +27,17 @@ buttonsAddCard.forEach(b => b.addEventListener("click", () => {
   formAddCard.style.transform = "none";
 }))
 
-function stopDefAction(evt) {
-  evt.preventDefault();
-  document.form.reset();
-}
+// function stopDefAction(evt) {
+//   evt.preventDefault();
+//   document.form.reset();
+// }
 
-formSingUp.addEventListener(
-'submit', stopDefAction, false);
+// formSingUp.addEventListener(
+// 'submit', stopDefAction, false);
 
-buttonLogin.addEventListener("click", () => {
-  login.style.display = "none";
-});
+// buttonLogin.addEventListener("click", () => {
+//   login.style.display = "none";
+// });
 
 
 buttonsClose.forEach(btn => btn.addEventListener("click", () => {

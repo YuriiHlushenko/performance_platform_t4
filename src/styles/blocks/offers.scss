@@ -1,0 +1,372 @@
+.offers {
+  position: relative;
+  margin: 0 8px 8px 8px;
+  overflow-x: scroll;
+
+  @include onTablet {
+    margin: 0 16px 16px 16px;
+  }
+
+  @include onDesktop {
+    overflow-x: initial;
+    padding: 30px;
+    margin: 0 auto 8px auto;
+    border-radius: 20px;
+    align-items: center;
+  }
+
+  &--balance {
+    @include onDesktop {
+      background-color: var(--bg--box);
+      padding: 0;
+    }
+  }
+
+  &__add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+
+    &-button {
+      border: none;
+    }
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__scroll {
+    display: flex;
+    gap: 12px;
+    padding: 0 43px;
+
+    @include onDesktop {
+      display: block;
+      padding: 0;
+    }
+  }
+
+  &__container {
+    padding: 18px;
+    color: var(--text--white);
+    background-color: var(--bg--box);
+
+    @extend %shadow;
+    width: calc(100vw - 86px);
+    flex-shrink: 0;
+    box-sizing: border-box;
+    // position: relative;
+    height: min-content;
+
+    @include onTablet {
+      padding: 32px;
+      width: calc(100vw - 32px);
+    }
+
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: 0.7fr 3fr 2fr 2.3fr 1fr 1fr 1fr 1.8fr;
+      border-radius: 20px;
+      align-items: center;
+      padding: 8px 25px;
+      margin-bottom: 8px;
+      width: 100%;
+      gap: 10px;
+
+      &--active {
+        .page__label,
+        .offers__value,
+        .offers__value-subtitle,
+        .page__value {
+          color: var(--items--active);
+        }
+
+        .offers__label-payout {
+          color: var(--text--black);
+          background-color: var(--text--white);
+        }
+
+        .icon__downWhite--payout {
+          stroke: var(--text--black);
+        }
+      }
+    }
+
+    &--chanels {
+      @include onDesktop {
+        grid-template-columns: 1fr 2.5fr 2fr 2fr 1fr 1fr 1fr 1fr;
+      }
+    }
+  }
+
+  &--chanels {
+    margin-bottom: 15px;
+
+    @include onTablet {
+      margin-bottom: 30px;
+    }
+
+    @include onDesktop {
+      padding: 0 20px 0 40px;
+      max-width: initial;
+    }
+  }
+
+  &--maxWidth {
+    max-width: 1200px;
+  }
+
+  &__head {
+    display: none;
+
+    @include onDesktop {
+      display: grid;
+      background:#0E1218;
+      margin-bottom: 30px;
+      padding: 32px;
+      gap: 0;
+
+      &>* {
+        color: $textWhite;
+      }
+    }
+
+    &-label {
+      margin: 0;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    @include onTablet {
+      margin-bottom: 50px;
+    }
+
+    @include onDesktop {
+      margin: 0;
+    }
+
+    &-title {
+      position: relative;
+      margin: 0;
+
+      &--white {
+        color: $textWhite;
+      }
+    }
+
+    &-settings {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @include onTablet {
+        gap: 40px;
+      }
+
+      @include onDesktop {
+        gap: initial;
+        justify-content: space-between;
+      }
+
+      &--profile {
+        @include onDesktop {
+          width: 8%;
+          right: 30px;
+          justify-content: space-between;
+          gap: initial;
+        }
+      }
+
+      &--mobile {
+        @include onDesktop {
+          display: none;
+        }
+      }
+
+      &--desktop {
+        display: none;
+
+        @include onDesktop {
+          justify-content: flex-end;
+          gap: 20px;
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    &--balance {
+      &:first-child {
+        order: 1;
+      }
+
+      &:nth-child(n + 5) {
+        order: 2;
+      }
+    }
+  }
+
+  &__wrapper>div,
+  &__wrapper>span {
+    @include onDesktop {
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+
+  &__wrapper>span {
+    @include onDesktop {
+      &:nth-of-type(2) {
+        display: none;
+      }
+    }
+  }
+
+  &__label {
+    width: max-content;
+
+    &-payout {
+      display: none;
+      @extend %shadow;
+      position: relative;
+
+      @include onDesktop {
+        display: block;
+        padding: 10px 12px;
+        background-color: $payout;
+        width: min-content;
+        font-size: 16px;
+        line-height: 18.8px;
+        color: $textWhite;
+        margin: 0 auto;
+      }
+
+      &--chanels {
+        @include onDesktop {
+          margin: 0;
+        }
+      }
+
+    }
+  }
+
+  &__value {
+    margin-bottom: 24px;
+
+    @include onTablet {
+      margin-bottom: 50px;
+    }
+
+    @include onDesktop {
+      margin: 0 auto;
+      width: max-content;
+      text-align: right;
+    }
+
+    &-subtitle {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14.1px;
+      color: var(--text--white);
+
+
+      @include onTablet {
+        font-size: 24px;
+      }
+
+      @include onDesktop {
+        color: var(--text--white);
+        font-size: 10px;
+      }
+    }
+
+    &--chanels {
+      margin-bottom: 14px;
+
+      @include onTablet {
+        margin-bottom: 30px;
+      }
+
+      @include onDesktop {
+        margin-bottom: 0;
+      }
+    }
+
+    &-subtitle {
+      margin-bottom: 14px;
+
+      @include onDesktop {
+        margin-bottom: 0;
+      }
+    }
+
+    &--creators {
+      margin: 0;
+
+      @include onTablet {
+        margin-bottom: 8px;
+      }
+
+      @include onDesktop {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &--chanels {
+    margin-top: 8px;
+    padding-bottom: 1px;
+
+    @include onTablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 6px;
+
+    @include onTablet {
+      width: 112px;
+      margin-bottom: 14px;
+    }
+
+    @include onDesktop {
+      width: 36px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__payout {
+    @include onDesktop {
+      display: none;
+    }
+
+    &-btn {
+      background-color:#181A1E;
+      padding: 10px 15px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14.1px;
+
+      &--active {
+        background: #3334FF;
+      }
+    }
+  }
+}

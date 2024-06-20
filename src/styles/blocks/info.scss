@@ -1,0 +1,128 @@
+.info {
+  font-family: "DM Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 22px;
+
+  @include onTablet {
+    margin-bottom: 44px;
+    gap: 12px;
+  }
+
+  @include onDesktop {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    width: calc(100vw - 295px - 80px);
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  @media (min-width: 1920px) {
+    width: calc(1920px - 295px - 80px);
+  }
+
+  &--manager {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+    }
+  }
+
+  &--main {
+    margin: 0 30px 30px;
+  }
+
+  &__container {
+    overflow: hidden;
+    position: relative;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: var(--bg--box);
+    color: var(--text--white);
+
+    @include onTablet {
+      padding: 24px;
+      border-radius: 20px;
+    }
+
+    @include onDesktop {
+      flex-grow: 1;
+      padding: 20px 30px;
+    }
+
+    &::after {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 3.5px;
+      content: '';
+      background-color: #413EFB;
+      border-bottom: 10px;
+
+      @include onTablet {
+        height: 7px;
+      }
+    }
+
+    &:nth-child(2) {
+      &::after {
+        background-color: #FBD823;
+      }
+    }
+
+    &:nth-child(3) {
+      &::after {
+        background-color: #7B56F2;
+      }
+    }
+
+    &:nth-child(4) {
+      &::after {
+        background-color: #36393D;
+      }
+    }
+
+    &:nth-child(5) {
+      &::after {
+        background-color: #FF7A00;
+      }
+    }
+  }
+
+  &__title {
+    color: var(--text--white);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin: 0;
+
+    @include onTablet {
+      font-size: 25px;
+    }
+  }
+
+  &__value {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0;
+
+    @include onTablet {
+      font-size: 40px;
+    }
+  }
+
+  &--support {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,276 @@
+.main {
+  @include onDesktop {
+    // box-sizing: border-box;
+    padding: 180px 40px 67px;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  &__container {
+    padding: 0 12px;
+
+    @include onTablet {
+      padding: 0 24px;
+    }
+
+    @include onDesktop {
+      padding: 0;
+    }
+  }
+
+  &__slider {
+    position: relative;
+
+    margin-bottom: 40px;
+
+
+    @include onTablet {
+      margin-bottom: 42px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 42px;
+    }
+
+    &-container {
+      overflow-x: auto;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    padding: 0 70px;
+
+    @include onDesktop {
+      display: flex;
+      gap: 30px;
+    }
+
+    &-container {
+      flex-shrink: 0;
+      width: calc(100vw - 140px);
+      box-sizing: border-box;
+
+      @include onTablet {
+        padding: 0 50px;
+        width: calc(100vw - 32px);
+      }
+
+      @include onDesktop {
+        padding: 0;
+        width: initial;
+        // flex-shrink: 1;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        transform: scale(0.88);
+      }
+    }
+
+    &-card {
+      width: 100%;
+
+      @extend %shadow;
+    }
+
+    &-add {
+      color: var(--text--white);
+      display: block;
+      flex-shrink: 0;
+      flex-grow: 1;
+      background-color: var(--bg--box);
+      border-radius: 20px;
+      border: none;
+      height: calc(100vw * 0.38);
+      width: calc(100vw * 0.38);
+      transform: scale(0.88);
+
+      @include onDesktop {
+        @include square(218px);
+      }
+    }
+  }
+
+  &__addCard {
+    background: none;
+    color: var(--text--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 40px;
+
+    &-container {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    &-label {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 26.04px;
+    }
+
+    &-plus {
+      @include circle(30px);
+
+      background: var(--text--white);
+      display: flex;
+      position: relative;
+
+      &-svg {
+        @extend %absCenter;
+      }
+    }
+  }
+
+  &__balance {
+    color: var(--text--white);
+    padding: 30px 20px 40px;
+    background-color: var(--bg--box);
+    margin: 12px 0;
+
+    @extend %shadow;
+
+    @include onTablet {
+      margin: 24px;
+      padding: 62px 0 82px 40px;
+
+    }
+
+    @include onDesktop {
+      width: 382px;
+      height: 218px;
+      padding: 28px 88px 48px 28px;
+    }
+
+    &-title {
+      font-size: 17px;
+      font-weight: 500;
+      margin: 0 0 53px;
+      letter-spacing: -0.02em;
+
+      @include onTablet {
+        font-size: 35.13px;
+        margin-bottom: 110px;
+      }
+
+      @include onDesktop {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.02em;
+      }
+    }
+
+    &-value {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: -0.02em;
+
+      @include onTablet {
+        font-size: 62px;
+        line-height: 50px;
+      }
+
+      @include onDesktop {
+        font-size: 48px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.graph {
+  position: relative;
+  background: #0E1218;
+  border-radius: 20px;
+  margin-bottom: 37px;
+  padding: 26px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  @include onTablet {
+    margin-bottom: 40px;
+    padding: 50px 0;
+    gap: 27px;
+  }
+
+  @include onDesktop {
+    margin-bottom: 0;
+  }
+
+  &__bg {
+    position: absolute;
+    bottom: -7px;
+    width: 100%;
+    height: 100%;
+    background-color: #3334FF;
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  &__container {
+    position: relative;
+    height: 25px;
+    width: 100%;
+
+    @include onTablet {
+      height: 48px;
+    }
+
+    &-bar {
+      position: absolute;
+      width: 63%;
+      font-family: "DM Sans", sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 25px;
+      padding-left: 12px;
+      background: linear-gradient(90deg, rgba(66, 62, 255, 0) 0.03%, #423EFF 99.97%);
+      border-width: 1px 1px 1px 0;
+      border-style: solid;
+      border-image-source: linear-gradient(-90deg, rgba(66, 62, 255, 0) 0%, #423EFF 100%);
+
+      @include onTablet {
+        font-size: 24px;
+        line-height: 48px;
+      }
+
+      &--2 {
+        width: 92%;
+        background: linear-gradient(90deg, rgba(255, 219, 35, 0) 0%, #FFDB23 100%);
+      }
+
+      &--3 {
+        width: 69%;
+        background: linear-gradient(359.99deg, rgba(127, 89, 251, 0) 0.01%, #7F59FB 99.99%);
+      }
+
+      &--4 {
+        width: 46%;
+        background: linear-gradient(359.96deg, rgba(55, 58, 62, 0) 0.04%, #373A3E 99.96%);
+      }
+    }
+
+    &-axis {
+      top: 50%;
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background: rgba(81, 80, 80, 0.5);
+
+      @include onTablet {
+        height: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,299 @@
+.users {
+  margin: 8px 8px 16px;
+  max-width: initial;
+
+  @include onTablet {
+    margin: 16px;
+  }
+
+  @include onDesktop {
+    box-sizing: border-box;
+    flex-grow: 1;
+    margin: 0;
+    padding: 180px 20px 0 40px;
+    background: none;
+  }
+
+  &__scroll {
+    padding: 0;
+  }
+
+  &__container {
+    background: none;
+    width: calc(100vw - 16px);
+    padding: 0;
+
+    &-box {
+      padding: 22px 0 18px;
+      border-radius: 20px;
+      background-color: var(--bg--box);
+      margin-bottom: 10px;
+    }
+
+    @include onTablet {
+      padding: 36px 0 28px;
+      width: calc(100vw - 32px);
+    }
+
+    @include onDesktop {
+      width: 100%;
+      display: grid;
+      box-sizing: border-box;
+      grid-template-columns: 1fr 2fr 2fr 2.3fr 1.2fr 1fr;
+      border-radius: 20px;
+      padding: 16px 20px;
+    }
+  }
+
+  &__head {
+    @include onDesktop {
+      padding: 30px 20px;
+    }
+  }
+
+  &__top,
+  &__wrapper {
+    padding: 0 18px;
+
+    @include onTablet {
+      padding: 0 36px;
+    }
+
+    @include onDesktop {
+      padding: 0;
+    }
+  }
+
+  &__wrapper {
+    @include onDesktop {
+      padding: 0;
+    }
+  }
+
+  &__top {
+    margin-bottom: 0;
+
+    &-title {
+      margin-bottom: 6px;
+
+      @include onTablet {
+        margin-bottom: 12px;
+      }
+
+      @include onDesktop {
+        margin: 0;
+      }
+    }
+  }
+
+  &__value {
+    padding-bottom: 40px;
+
+    &:last-child {
+      padding-bottom: 15px;
+    }
+
+    @include onTablet {
+      padding-bottom: 80px;
+    }
+
+    @include onDesktop {
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+    padding: 0 4px;
+    margin-bottom: 6px;
+
+    @include onTablet {
+      padding: 0 8px;
+      margin-bottom: 12px;
+    }
+
+    &-icon {
+      position: absolute;
+      right: 11px;
+      bottom: 12px;
+
+      @include onTablet {
+        right: 22px;
+        bottom: 22px;
+      }
+
+      &>img {
+        @include onTablet {
+          @include square(42px);
+        }
+
+        @include onDesktop {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__payments {
+    position: relative;
+    padding: 20px;
+    margin: 0 4px 14px;
+    @extend %shadow;
+    background-color: var(--bg--box);
+    transition: all $duration;
+
+    @include onTablet {
+      padding: 28px;
+      margin: 0 8px 28px;
+    }
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-roll {
+      margin-top: 15px;
+      display: none;
+      transition: transform $duration;
+
+      @include onTablet {
+        margin-top: 30px;
+      }
+
+      &--balance {
+        display: block;
+        margin-top: 20px;
+
+        @include onDesktop {
+          box-shadow: none;
+          background: none;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr 1.2fr 1fr 0.5fr;
+          margin-bottom: 0;
+        }
+      }
+
+      &--top {
+        display: none;
+
+        @include onDesktop {
+          display: grid;
+        }
+      }
+    }
+
+    &-title {
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    &-buttons {
+      display: flex;
+      gap: 10px;
+
+      @include onTablet {
+        gap: 20px;
+      }
+
+      &-buttonDown {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &-add {
+        @include circle(21px);
+        margin: auto auto auto 13px ;
+      }
+    }
+
+    &-value {
+      margin-bottom: 20px;
+
+      @include onTablet {
+        margin-bottom: 40px;
+      }
+
+      @include onDesktop {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.45px;
+        margin: 0;
+        color: var(--text--white);
+      }
+    }
+
+    &-status {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include onTablet {
+        margin-bottom: 14px;
+      }
+
+      @include onDesktop {
+        margin: 0;
+      }
+
+      &--label {
+        margin-bottom: 0;
+        line-height: 26px;
+
+        @include onDesktop {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16.45px;
+          text-align: left;
+        }
+      }
+
+      &--absolute {
+        @include onDesktop {
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+
+    &--balance {
+      margin: 8px;
+      position: relative;
+
+      @include onTablet {
+        margin: 16px;
+      }
+    }
+  }
+
+  &__cards {
+    padding: 0 4px;
+
+    @include onDesktop {
+      display: none;
+    }
+
+  }
+
+  &__roll {
+    display: block;
+    padding: 10px 40px;
+    margin: 0 auto;
+
+    @include onTablet {
+      padding: 20px 80px;
+      border-radius: 40px;
+    }
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+}

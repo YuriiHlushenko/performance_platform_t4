@@ -1,3 +1,16 @@
-body {
-  margin: 0;
-}
+@import "_utils";
+
+@import "blocks/page";
+@import "blocks/header";
+@import "blocks/menu";
+@import "pages/main";
+@import "blocks/form";
+@import "blocks/account";
+@import "blocks/offers";
+@import "blocks/info";
+@import "pages/users";
+@import "pages/support";
+@import "blocks/footer";
+@import "blocks/login";
+@import "blocks/landing";
+

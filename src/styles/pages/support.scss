@@ -1,0 +1,171 @@
+.support {
+  display: flex;
+  flex-direction: column;
+  color: var(--text--white);
+  padding: 8px;
+  gap: 12px;
+
+  @include onTablet {
+    padding: 16px;
+    gap: 24px;
+  }
+
+  @include onDesktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+  }
+
+  &__input {
+    @include onDesktop {
+      background: none;
+    }
+  }
+
+  &__item {
+    padding: 18px 18px 0px 18px;
+    border-radius: 20px;
+    display: flex;
+
+    @include onTablet {
+      padding: 36px 36px 0px 36px;
+      border-radius: 40px;
+    }
+
+    @include onDesktop {
+      padding: 0;
+      background: none;
+    }
+
+    &-button {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      align-self: end;
+
+      @include onDesktop {
+        display: none;
+      }
+    }
+
+    &-img {
+      display: none;
+      font-size: 22px;
+      font-weight: 400;
+
+      @include onDesktop {
+        display: block;
+        padding: 18px;
+        border-radius: 20px;
+        height: min-content;
+        margin: auto 30px auto;
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      width: 100%;
+
+      @include onTablet {
+        font-size: 46px;
+      }
+
+      @include onDesktop {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 23.5px;
+      }
+    }
+
+    &-more {
+      display: none;
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 48px;
+      text-align: left;
+      color: var(--text--white);
+      margin-top: 10px;
+
+      @include onDesktop {
+        display: block;
+        font-size: 16px;
+        line-height: 18.8px;
+      }
+    }
+  }
+
+  &__form {
+    color: var(--text--white);
+    position: static;
+    transform: none;
+    margin: 8px;
+    max-width: initial;
+    box-shadow: none;
+
+    @include onTablet {
+      margin: 16px;
+    }
+
+    @include onDesktop {
+      margin: 50px 25px 25px 42px;
+      padding: 25px 50px;
+      background: none;
+    }
+
+    &-flex {
+      @include onDesktop {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+    }
+  }
+
+  &__title {
+    @include onDesktop {
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 36.46px;
+      text-align: center;
+    }
+  }
+
+  &__buttons {
+    @include onDesktop {
+      justify-content: center;
+      gap: 30px;
+    }
+
+    &--addFile {
+      @include onDesktop {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__input--message {
+    height: 144px;
+
+    @include onTablet {
+      height: 300px;
+    }
+
+    @include onTablet {
+      height: 70px;
+    }
+  }
+
+  &__addFile {
+    text-align: right;
+    background: none;
+    background-color: none;
+    border: none;
+    box-shadow: 0;
+    color: var(--text--white);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.45px;
+    text-align: right;
+  }
+}

@@ -1,0 +1,110 @@
+.account {
+  width: 100%;
+  padding: 10px 14px 25px;
+  background-color: var(--bg--box);
+  border-radius: 20px;
+  margin-bottom: 48px;
+  box-sizing: border-box;
+
+  @include onTablet {
+    padding: 30px 25px;
+  }
+
+  @include onDesktop {
+    margin-bottom: 0;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 3.2fr 1fr;
+    margin-bottom: 6px;
+
+    @include onTablet {
+      margin-bottom: 30px;
+    }
+
+    @include onDesktop {
+      grid-template-columns: 1fr 1.3fr;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    @include onTablet {
+      gap: 27px;
+    }
+
+    @include onDesktop {
+      width: 362px;
+    }
+
+    &-row {
+      display: grid;
+      grid-template-columns: 1fr 65%;
+
+    }
+  }
+
+  &__label {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+
+    @include onTablet {
+      font-size: 25px;
+    }
+
+    @include onDesktop {}
+  }
+
+  &__value {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    text-align: left;
+
+    @include onTablet {
+      font-size: 25px;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+    width: 70%;
+    border-radius: 50%;
+  }
+
+  &__managment {
+    display: flex;
+    gap: 12px;
+
+    @include onTablet {
+      gap: 24px;
+    }
+  }
+
+  &__button {
+    min-width: 100px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.28px;
+
+    @include onTablet {
+      font-size: 21px;
+      line-height: 24.68px;
+    }
+
+    @include onDesktop {
+      font-size: 16px;
+      line-height: 18.8px;
+    }
+  }
+}

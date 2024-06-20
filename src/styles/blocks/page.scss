@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.icon {
+  width: 20px;
+
+  @include onTablet {
+    width: 40px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+
+    &-img {
+      @include square(18px);
+
+      @include onTablet {
+        @include square(40px);
+      }
+
+      @include onDesktop {
+        @include square(26px);
+      }
+    }
+
+    &--down {
+      @include onTablet {
+        @include square(78px);
+      }
+    }
+
+    &--bin {
+      @include onTablet {
+        width: 44px;
+        height: 48px;
+      }
+
+      @include onDesktop {
+        width: 27px;
+        height: 30px;
+      }
+    }
+  }
+
+  &__done {
+    padding-left: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.button {
+  color: #fff;
+  background: var(--button--bg);
+  box-shadow: 0px 4px 20px 0px #00000040;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  font-style: normal;
+  font-family: "Public Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.8px;
+  text-decoration: none;
+
+  @include onTablet {
+    font-size: 33px;
+    line-height: 40px;
+    padding: 20px 40px;
+    gap: 20px;
+    border-radius: 42px;
+  }
+
+  @include onDesktop {
+    padding: 10px 40px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.8px;
+  }
+
+  &--light {
+    font-family: "DM Sans", sans-serif;
+    background: var(--bg--box);
+    padding: 6px 10px;
+    border-radius: 13px;
+    font-weight: 500;
+    line-height: 32px;
+
+    @include onTablet {
+      padding: 12px 20px;
+      border-radius: 27px;
+    }
+
+    @include onDesktop {
+      font-size: 28px;
+      font-weight: 500;
+      padding: 15px 20px;
+    }
+  }
+
+  &--active {
+    background: #092145;
+  }
+
+  &--cancel {
+    background: #A3AED0;
+    padding: 10px 22px;
+
+    @include onTablet {
+      padding: 20px 44px;
+    }
+  }
+
+  &__status {
+    padding: 5px 20px;
+    background: #D8E1FF;
+    color: #2E65F3;
+    box-shadow: none;
+
+    &--complete {
+      background-color: #DDE4BA;
+      color: #0FAF62;
+    }
+
+    @include onTablet {
+      padding: 10px 40px;
+    }
+
+    @include onDesktop {
+      padding: 5px 20px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.45px;
+      text-align: left;
+    }
+  }
+
+  &--card {
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin: 0 14px 10px 0;
+
+    @include onTablet {
+      padding: 30px 40px;
+      border-radius: 40px;
+      margin: 0 28px 20px 0;
+    }
+  }
+
+  &--add {
+    position: absolute;
+    right: 21px;
+  }
+}
+
+.page {
+  --text--black: #000;
+  --text--white: #fff;
+  --text--grey: #434343;
+  --text--blue: #2A578B;
+  --text--gradient: linear-gradient(90deg, #E5F0FF 0%, #608BFE 53%, #2D29FF 100%);
+  --bg--page: #000;
+  --bg--box: #0E1218;
+  --bg-menu-items: #124897;
+  --items--active: #302EFF;
+  --button--bg: #2A2CC5;
+  background: #3334FF;
+
+
+
+  --color-header: #fff;
+  --bg-header: #000;
+
+  font-family: "Public Sans", sans-serif;
+  font-style: normal;
+  scroll-behavior: smooth;
+  color: #fff;
+  position: relative;
+  min-height: calc(100vh - 46px);
+  padding-bottom: 46px;
+  min-width: 320px;
+
+  background-color: var(--bg--page);
+
+  @include onTablet {
+    min-height: calc(100vh - 90px);
+    padding-bottom: 90px;
+  }
+
+  @include onDesktop {
+    padding-bottom: 0;
+  }
+
+  // &--theme-dark {
+  //   --text--black: #fff;
+  //   --text--white: #000;
+  //   --text--grey: #fff;
+  //   --text--blue: #b9d0ec;
+  //   --color--page: #fff;
+  //   --bg--page: #292a2c;
+  //   --bg--box: #75777e;
+  //   --bg-offers-box: #9a9ca3;
+  //   --bg-menu-items: #10366e;
+  //   --bg-menu-items--active: #051329;
+
+  //   --color-header: #fff;
+  //   --bg-header: linear-gradient(180deg, #2254a0 0%, #193c75 100%, #03080f 100%);
+  //   --button--bg: linear-gradient(90deg, #163c75 0%, #316EC9 57%, #0149B4 100%);
+
+  //   .header__switcher::after {
+  //     transform: translateX(100%);
+  //   }
+  // }
+
+
+  &__body {
+    margin: 0 auto;
+    // position: relative;
+    max-width: 1920px;
+
+    @include onDesktop {
+      position: relative;
+    }
+
+    &--with-menu {
+      overflow: hidden;
+    }
+  }
+
+  &__container {
+    margin: 0 20px;
+
+    &--grid {
+      @include onDesktop {
+        display: grid;
+        grid-template-columns: 1fr 1.45fr;
+        margin: 180px 20px 20px 40px;
+        gap: 30px;
+      }
+    }
+  }
+
+  &__grid {
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: 295px 1fr;
+      min-height: 100vh;
+    }
+  }
+
+  &__content {
+    position: relative;
+
+    &--chanels {
+      @include onDesktop {
+        box-sizing: border-box;
+        flex-grow: 1;
+        margin: 0;
+        padding: 180px 0 0;
+        background: none;
+      }
+    }
+  }
+
+  &__background {
+    display: none;
+    z-index: -1;
+
+    @include onDesktop {
+      display: block;
+      width: 60%;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &--transform {
+      top: initial;
+      bottom: 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    @include onTablet {
+      padding: 16px 16px 24px 16px;
+    }
+
+    @include onDesktop {
+      padding: 15px 0;
+      font-size: 16px;
+      gap: 20px;
+    }
+
+    &-container {
+      display: flex;
+      align-items: center;
+
+      @include onDesktop {
+        gap: 20px;
+      }
+    }
+
+    &--chanels {
+      display: none;
+      padding: 36px 0;
+
+      @include onDesktop {
+        display: flex;
+      }
+    }
+
+    &--offers {
+      display: none;
+
+      @include onDesktop {
+        padding: 0;
+      }
+    }
+
+    &--balance {
+      @include onDesktop {
+        justify-content: start;
+        gap: 30px;
+      }
+    }
+  }
+
+  &__regular {
+    //styleName: H6 (public);
+    font-family: "Public Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    @include onTablet {
+      font-size: 28px;
+    }
+
+    @include onDesktop {
+      font-size: 20px;
+      line-height: 23.5px;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 37.6px;
+    text-align: left;
+    background: linear-gradient(90deg, #E5F0FF 0%, #608BFE 53%, #2D29FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 45px 20px 40px;
+
+    @include onDesktop {
+      display: none;
+    }
+
+    @include onTablet {
+      padding: 40px 0;
+      margin-top: 8px;
+    }
+
+    &-span {
+      font-weight: 700;
+    }
+  }
+
+  &__headline {
+    display: flex;
+    padding: 20px 0;
+    background: var(--bg--box);
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+
+    @include onDesktop {
+      display: none;
+    }
+
+    &-h5 {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18.8px;
+      text-align: left;
+      margin: 0;
+
+      @include onTablet {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 30.55px;
+      }
+    }
+
+    @include onTablet {
+      padding: 40px 0;
+      margin-top: 8px;
+    }
+  }
+
+  &__label {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 25.85px;
+    margin-bottom: 6px;
+    color: var(--text--white);
+
+    @include onTablet {
+      font-size: 45.47px;
+      line-height: 53.42px;
+      margin-bottom: 12px;
+    }
+
+    @include onDesktop {
+      font-size: 20px;
+      line-height: 23.5px;
+      width: max-content;
+      margin: 0;
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  &__value {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 19.98px;
+    margin-bottom: 12px;
+    color: var(--text--white);
+
+    @include onTablet {
+      margin-bottom: 24px;
+      font-size: 35.13px;
+
+    }
+
+    @include onDesktop {
+      font-family: "DM Sans", sans-serif;
+      font-size: 20px;
+      margin-bottom: 20px;
+      width: max-content;
+    }
+  }
+
+  &__arrow {
+    border: none;
+    background: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+
+    @include onTablet {
+      height: 61px;
+    }
+
+    @include onDesktop {
+      display: none;
+    }
+
+    &-prev {
+      left: 0;
+      transform: rotateY(180deg) translateY(50%);
+    }
+
+    &-next {
+      right: 0;
+    }
+
+    &--static {
+      padding: 0 12px;
+
+      @include onTablet {
+        padding: 0 20px;
+      }
+    }
+
+    &>img,
+    &>svg {
+      @include onTablet {
+        width: 10px;
+        height: 61px;
+      }
+    }
+
+    &>svg {
+      stroke: var(--text--black);
+    }
+  }
+
+  &__desktop {
+    display: none;
+
+    @include onDesktop {
+      display: initial;
+    }
+  }
+
+  &__mobile {
+    @include onDesktop {
+      display: none;
+    }
+  }
+}
+
+.shadow {
+  transform: translateX(-100%);
+  transition: all $duration;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.3;
+}
+
+.select {
+  position: relative;
+
+  &__select {
+    color: var(--text--black);
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    text-align: center;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    // margin: 0;
+    bottom: 0;
+    background-color: var(--bg--box);
+    right: -22px;
+    padding: 10px 4px;
+    list-style: none;
+    text-align: center;
+    border-radius: 20px;
+
+    @extend %shadow;
+
+    & li {
+      position: relative;
+      cursor: pointer;
+      padding: 10px 22px;
+      border-radius: 20px;
+      color: #000;
+    }
+
+    &--active {
+      background-color: $payout;
+      color: var(--text--black);
+    }
+  }
+
+  &__arrow {
+    display: none;
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    stroke: $textWhite;
+    pointer-events: none;
+
+    @include onDesktop {
+      display: block;
+    }
+  }
+}

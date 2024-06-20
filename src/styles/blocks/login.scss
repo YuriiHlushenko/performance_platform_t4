@@ -1,0 +1,119 @@
+.login {
+  position: fixed;
+  display: grid;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  display: none;
+
+  &__header {
+    background-image: url(/images/loginMobile.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    background-size: contain;
+
+    @include onDesktop {
+      background-image: url(/images/loginDesktop.png);
+    }
+  }
+
+  &__button {
+    background: none;
+    background-color: #2E65F3;
+
+    &--active {
+      background-color: #124897;
+    }
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin-bottom: 16px;
+  }
+
+  &__logo {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    padding: 33px 120px 27px 18px;
+
+    @include onDesktop {
+      padding: 0;
+      position: absolute;
+      flex-direction: column;
+      gap: 60px;
+     bottom: 30%;
+      right: 5%;
+    }
+
+    &-bg {
+      @include square(68px);
+
+      @include onDesktop {
+        background: none;
+        @include square(300px);
+      }
+    }
+
+    &-img {
+      width: 54px;
+
+      @include onDesktop {
+        @include square(300px);
+      }
+    }
+
+    &-title {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 41.66px;
+      text-align: left;
+      margin: 0;
+
+      @include onDesktop {
+        display: block;
+        font-size: 100px;
+        font-weight: 400;
+        line-height: 130.2px;
+      }
+    }
+  }
+
+  &__form {
+    transform: none;
+    top: 10%;
+
+    @include onDesktop {
+      width: 455px;
+      position: absolute;
+      left: 25%;
+      top:50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    &-container {
+      background: none;
+      box-shadow: none;
+    }
+
+    &-input {
+      background: none;
+    }
+
+    &-container {
+      margin-bottom: 16px;
+    }
+  }
+
+
+  &__button-add {
+    display: block;
+    margin: 0 auto;
+  }
+}

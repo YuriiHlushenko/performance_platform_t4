@@ -1,0 +1,15 @@
+%shadow {
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px 0px #00000040;
+
+  @include onTablet {
+    border-radius: 40px;
+  }
+}
+
+%absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
