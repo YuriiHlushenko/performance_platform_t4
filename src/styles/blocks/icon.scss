@@ -1,0 +1,52 @@
+.icon {
+  width: 20px;
+
+  @include onTablet {
+    width: 40px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+
+    &-img {
+      @include square(18px);
+
+      @include onTablet {
+        @include square(40px);
+      }
+
+      @include onDesktop {
+        @include square(26px);
+      }
+    }
+
+    &--down {
+      @include onTablet {
+        @include square(78px);
+      }
+    }
+
+    &--bin {
+      @include onTablet {
+        width: 44px;
+        height: 48px;
+      }
+
+      @include onDesktop {
+        width: 27px;
+        height: 30px;
+      }
+    }
+  }
+
+  &__done {
+    padding-left: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

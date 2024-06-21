@@ -1,0 +1,209 @@
+.landing {
+  &__container {
+    padding: 0 30px;
+
+    @include onTablet {
+      padding: 0 70px;
+    }
+
+    @include onDesktop {
+      padding: 0 160px;
+    }
+  }
+
+  &__title {
+    font-family: "DM Sans", sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.3em;
+    background: linear-gradient(96.87deg, #2D29FF 0.46%, #4477FD 51.98%, #FFFFFF 99.54%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin: 44px 0;
+
+    @include onTablet {
+      font-size: 58px;
+      margin: 56px 0;
+    }
+
+    @include onDesktop {
+      font-size: 150px;
+      margin: 120px 0;
+    }
+
+    &--second {
+      background: linear-gradient(282.07deg, #2E2DFF 15.8%, #4D84FD 48.63%, #E5F0FF 84.2%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0 0 12px;
+
+      @include onTablet {
+        margin: 0 0 30px;
+      }
+
+      @include onDesktop {
+        margin: 0 0 98px;
+      }
+    }
+
+    &--add {
+      background: linear-gradient(90deg, #E5F0FF 0%, #5791FC 52.5%, #2F2FFF 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      text-align: right;
+      margin: 0;
+
+      &--last {
+        margin-bottom: 43px;
+      }
+    }
+
+    &--income {
+      font-size: 18px;
+      text-align: center;
+      margin: 0 0 8px;
+    }
+  }
+
+  &__incomeSubtitle {
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.3em;
+    text-align: center;
+
+    margin: 0 0 38px;
+  }
+
+  &__imgContainer {
+    padding: 10px 50px;
+    position: relative;
+
+    &--2 {
+      padding: 90px 0;
+    }
+  }
+
+  &__imgBox {
+    position: relative;
+
+    &-img {
+      width: 100%;
+      position: relative;
+
+      &--2 {
+        width: 70%;
+        position: relative;
+        right: -65%;
+      }
+    }
+  }
+
+  &__pointer {
+    position: absolute;
+    width: 70%;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.83px;
+    border-top: 2px solid #3235FF;
+
+    &--3 {
+      top: 19%;
+    }
+
+    &--4 {
+      top: 56%;
+    }
+  }
+
+  &__desktop {
+    width: 100%;
+    margin-bottom: 16px;
+
+    @include onTablet {
+      margin-bottom: 20px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__balance {
+    width: 100%;
+    margin-bottom: 27px;
+  }
+
+  &__income {
+    padding: 0 20px;
+    margin-bottom: 37px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px 8px;
+  }
+
+  &__card {
+    position: relative;
+    padding: 5px 10px 10px;
+    background-color: var(--bg--box);
+
+    flex-grow: 1;
+
+    &-img {
+      width: 28%;
+      margin-bottom: 11px;
+    }
+
+    &-svg {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &-label {
+      font-size: 12px;
+      font-weight: 400;
+      text-align: left;
+      margin-bottom: 2px;
+    }
+
+    &-bank {
+      font-family: "DM Sans", sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 1.3em;
+      margin-bottom: 13px;
+    }
+
+    &-button {
+      font-family: "DM Sans", sans-serif;
+      font-size: 7px;
+      font-weight: 400;
+      line-height: 1.3em;
+      padding: 15px, 50px
+    }
+  }
+
+  &__adapt {
+    padding: 0 23px;
+
+    &-img {
+      border-radius: 20px;
+      width: 100%;
+
+    }
+  }
+
+  &__grid {
+
+  }
+}

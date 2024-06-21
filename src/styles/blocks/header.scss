@@ -6,12 +6,38 @@
   align-items: center;
   padding: 40px 20px 0 28px;
 
+
+  @include onDesktop {
+    position: absolute;
+  }
+
   &--small {
     padding: 14px;
   }
 
   &--landing {
     padding: 40px 28px;
+
+    @include onDesktop {
+      position: static;
+    }
+  }
+
+  &__line {
+    --height: 2px;
+
+    @include onTablet {
+      --height: 3px;
+    }
+
+    @include onDesktop {
+      --height: 4px;
+    }
+
+    height: var(--height);
+    width: 100%;
+    content: '';
+    background: linear-gradient(90deg, #2D29FF 0%, #FFFFFF 100%);
   }
 
   &__buttons {
@@ -19,9 +45,6 @@
     gap: 15px;
   }
 
-  @include onDesktop {
-    position: absolute;
-  }
 
   &__container {
     display: flex;
@@ -42,6 +65,12 @@
       padding: 15px 30px;
       border-radius: 20px;
       z-index: 1;
+    }
+
+    &--landing {
+      @include onDesktop {
+        position: static;
+      }
     }
   }
 

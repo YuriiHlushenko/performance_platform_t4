@@ -18,7 +18,7 @@ npm install
 3.Start
 npm start
 
-[DEMO LINK](https://yuriihlushenko.github.io/performance_platform/)
+[DEMO LINK](https://yuriihlushenko.github.io/performance_platform_t4/)
 
-Landing page implemented according to [Figma design](https://www.figma.com/design/zRIqbjFpO7N8ZFZSEq1uXM/Performance-%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D0%B0?node-id=2001-4380&t=QqNv8GWgNbgAhDcU-0)
+Landing page implemented according to [Figma design](https://www.figma.com/design/hDAuRvQlXoiz0EvAxQf5l0/Performance-%D0%BF%D0%BB%D0%B0%D1%82%D1%84%D0%BE%D1%80%D0%BC%D0%B0-%D0%A24?node-id=37-53691&t=s7QjH3DAENEsl432-0)
 
