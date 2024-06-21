@@ -1,5 +1,8 @@
 .landing {
+  font-family: "DM Sans", sans-serif;
+
   &__container {
+    overflow: hidden;
     padding: 0 30px;
 
     @include onTablet {
@@ -7,7 +10,7 @@
     }
 
     @include onDesktop {
-      padding: 0 160px;
+      padding: 0 180px;
     }
   }
 
@@ -25,7 +28,7 @@
 
     @include onTablet {
       font-size: 58px;
-      margin: 56px 0;
+      margin: 50px 0;
     }
 
     @include onDesktop {
@@ -60,13 +63,33 @@
 
       &--last {
         margin-bottom: 43px;
+
+        @include onTablet {
+          margin-bottom: 76px;
+        }
+
+        @include onDesktop {
+          margin-bottom: 205px;
+        }
       }
     }
 
     &--income {
       font-size: 18px;
+      line-height: 1.3em;
+      font-weight: 700;
       text-align: center;
       margin: 0 0 8px;
+
+      @include onTablet {
+        font-size: 31px;
+        margin-bottom: 10px;
+      }
+
+      @include onDesktop {
+        font-size: 81px;
+        margin-bottom: 42px;
+      }
     }
   }
 
@@ -78,46 +101,103 @@
     text-align: center;
 
     margin: 0 0 38px;
+
+    @include onTablet {
+      font-size: 16px;
+      margin-bottom: 44px;
+    }
+
+    @include onDesktop {
+      font-size: 41px;
+      margin-bottom: 125px;
+    }
   }
 
   &__imgContainer {
     padding: 10px 50px;
     position: relative;
 
+    @include onTablet {
+      padding: 60px 80px;
+    }
+
+    @include onDesktop {
+      padding: 150px 0;
+    }
+
     &--2 {
       padding: 90px 0;
+
+      @include onDesktop {
+        padding: 150px 0;
+      }
     }
   }
 
   &__imgBox {
     position: relative;
+    text-align: right;
 
     &-img {
       width: 100%;
       position: relative;
 
+      @include onDesktop {
+        width: 33%;
+      }
+
       &--2 {
         width: 70%;
-        position: relative;
-        right: -65%;
+        right: -36%;
       }
     }
   }
 
   &__pointer {
     position: absolute;
-    width: 70%;
+    width: 71%;
     font-family: "DM Sans", sans-serif;
     font-size: 16px;
     font-weight: 700;
-    line-height: 20.83px;
+    line-height: 1.3em;
     border-top: 2px solid #3235FF;
+    text-align: left;
+    padding-top: 2px;
+    display: none;
+
+    @include onTablet {
+      font-size: 30px;
+      padding-top: 10px;
+    }
+
+    @include onDesktop {
+      border-width: 3px;
+      font-size: 40px;
+      padding-top: 20px;
+      display: block;
+    }
+
+    &--1 {
+      top: 28%;
+      width: 74%;
+    }
+
+    &--2 {
+      top: 48%;
+    }
 
     &--3 {
-      top: 19%;
+      top: 82%;
+      width: 72%;
     }
 
     &--4 {
+      display: block;
+      top: 19%;
+    }
+
+    &--5 {
+      display: block;
       top: 56%;
     }
   }
@@ -138,17 +218,41 @@
   &__balance {
     width: 100%;
     margin-bottom: 27px;
+
+    @include onTablet {
+      margin-bottom: 65px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 330px;
+    }
   }
 
   &__income {
     padding: 0 20px;
     margin-bottom: 37px;
+
+    @include onTablet {
+      padding: 0 30px;
+      margin-bottom: 50px;
+    }
+
+    @include onDesktop {
+      padding: 0 120px;
+      margin-bottom: 220px;
+    }
   }
 
   &__cards {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
     gap: 17px 8px;
+
+    @include onDesktop {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
   }
 
   &__card {
@@ -158,15 +262,33 @@
 
     flex-grow: 1;
 
+    @include onTablet {
+      padding: 25px;
+
+    }
+
     &-img {
-      width: 28%;
+      width: 30%;
       margin-bottom: 11px;
+
+      @include onDesktop {
+        margin-bottom: 14px;
+        width: 35%;
+      }
     }
 
     &-svg {
       position: absolute;
       right: 0;
       top: 0;
+
+      @include onTablet {
+        width: 60px;
+      }
+
+      @include onDesktop {
+        width: 80px;
+      }
     }
 
     &-label {
@@ -174,36 +296,254 @@
       font-weight: 400;
       text-align: left;
       margin-bottom: 2px;
+
+      @include onTablet {
+        margin-bottom: 6px;
+        font-size: 21px;
+      }
+
+      @include onDesktop {
+        margin-bottom: 6px;
+        font-size: 35px;
+      }
     }
 
     &-bank {
-      font-family: "DM Sans", sans-serif;
       font-size: 10px;
       font-weight: 400;
       line-height: 1.3em;
       margin-bottom: 13px;
+
+      @include onTablet {
+        margin-bottom: 32px;
+        font-size: 14px;
+      }
+
+      @include onDesktop {
+        margin-bottom: 28px;
+        font-size: 28px;
+      }
     }
 
     &-button {
+      display: inline-block;
       font-family: "DM Sans", sans-serif;
       font-size: 7px;
       font-weight: 400;
       line-height: 1.3em;
-      padding: 15px, 50px
+      padding: 15px 50px;
+
+      @include onTablet {
+        font-size: 12px;
+      }
+
+      @include onTablet {
+        font-size: 18px;
+        padding: 10px 35px;
+      }
     }
   }
 
   &__adapt {
     padding: 0 23px;
 
+    @include onTablet {
+      padding: 0 68px;
+      margin-bottom: 54px;
+    }
+
+    @include onDesktop {
+      padding: 0 170px;
+    }
+
     &-img {
       border-radius: 20px;
       width: 100%;
+      margin-bottom: 18px;
 
+      @include onTablet {
+        margin-bottom: 23px;
+      }
+
+      @include onDesktop {
+        height: 541px;
+        object-fit: cover;
+        margin-bottom: 0;
+      }
+
+      &--1 {
+        order: 1;
+      }
     }
   }
 
   &__grid {
+    margin-bottom: 18px;
 
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      margin-bottom: 48px;
+      gap: 48px;
+    }
+
+    &:last-child {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  &__text {
+    padding: 25px 9px 40px 25px;
+
+    @include onTablet {
+      padding: 52px 36px 70px 44px;
+    }
+
+    @include onDesktop {
+      padding: 92px 51px;
+    }
+
+    &-title {
+      font-family: "DM Sans", sans-serif;
+      font-size: 25px;
+      line-height: 1.3em;
+      text-align: left;
+      margin-bottom: 23px;
+
+      @include onTablet {
+        font-size: 41px;
+        margin-bottom: 17px;
+      }
+
+      @include onDesktop {
+        margin-bottom: 24px
+      }
+    }
+
+    &-p {
+      font-family: "DM Sans", sans-serif;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 1.3em;
+
+      @include onTablet {
+        font-size: 33px;
+      }
+    }
+  }
+
+  &__footer {
+    background-color: #141417;
+    padding: 26px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 4.5fr repeat(3, 1fr);
+
+    @include onTablet {
+      padding: 40px;
+      align-items: baseline;
+    }
+
+    @include onDesktop {
+      padding: 156px 135px 130px 180px;
+      align-items: baseline;
+    }
+
+    @include onTablet {
+      gap: 100px;
+    }
+
+    &-logo-img {
+      width: 19px;
+
+      @include onTablet {
+        width: 37px;
+      }
+
+      @include onDesktop {
+        width: 70px;
+      }
+    }
+
+    &-logo-title {
+      font-size: 10px;
+
+      @include onTablet {
+        font-size: 16px;
+      }
+
+      @include onDesktop {
+        font-size: 30px;
+      }
+    }
+
+    &-p {
+      font-size: 6px;
+      font-weight: 400;
+      line-height: 1.3em;
+      text-align: left;
+      margin: 16px 0 0 0;
+
+      @include onTablet {
+        margin-top: 28px;
+        font-size: 14px;
+      }
+
+      @include onDesktop {
+        margin-top: 44px;
+        font-size: 24px;
+      }
+    }
+
+    &-header {
+      width: max-content;
+      font-size: 7px;
+      font-weight: 700;
+      color: #0149B4;
+      margin: 0 0 3px;
+
+      @include onTablet {
+        font-size: 17px;
+        margin-bottom: 8px;
+      }
+
+      @include onDesktop {
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+    }
+
+    &-link {
+      display: block;
+      line-height: 1.3em;
+      font-size: 5px;
+      font-weight: 400;
+      text-decoration: none;
+      color: var(--text-white);
+      margin: 0 0 4px;
+
+      @include onTablet {
+        font-size: 12px;
+      }
+
+      @include onDesktop {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      &>svg {
+        @include square(21px);
+      }
+    }
+
+    &-social {
+      display: flex;
+      justify-content: space-between;
+
+      @include onTablet {
+        justify-content: start;
+        gap: 10px;
+      }
+    }
   }
 }

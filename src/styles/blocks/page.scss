@@ -7,14 +7,12 @@
   --text--grey: #434343;
   --text--blue: #2A578B;
   --text--gradient: linear-gradient(90deg, #E5F0FF 0%, #608BFE 53%, #2D29FF 100%);
-  --bg--page: #000;
+  --bg--page:#0A0A0A;
   --bg--box: #0E1218;
   --bg-menu-items: #124897;
   --items--active: #302EFF;
   --button--bg: #2A2CC5;
   background: #3334FF;
-
-
 
   --color-header: #fff;
   --bg-header: #000;
@@ -37,6 +35,13 @@
 
   @include onDesktop {
     padding-bottom: 0;
+  }
+
+  &--landing {
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.3em;
+    padding-bottom: 0;
+    background: #141417;
   }
 
   // &--theme-dark {
