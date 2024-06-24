@@ -17,9 +17,7 @@
   <div class="login">
     <div class="login__header">
       <div class="login__logo">
-        <div class="login__logo-bg header__logo-bg">
-          <img src="images/logo.svg" alt="Neurolide" class="login__logo-img">
-        </div>
+        <img src="images/logo.svg" alt="Neurolide" class="login__logo-img">
         <h1 class="login__logo-title">Neurolide</h1>
       </div>
     </div>
@@ -27,28 +25,28 @@
     <!--#region form-->
     <div class="form login__form" id="formSingUp">
       <form action="" class="form__container login__form-container">
-        <h5 class="form__title">Реєстрація</h5>
+        <h5 class="form__title login__title">Реєстрація</h5>
 
         <div class="login__buttons">
           <button id="affiliat" class="button login__button">Аффіліат</button>
           <button id="brend" class="button login__button login__button--active">Бренд</button>
         </div>
 
-        <label class="form__label" for="nameLogin">Ім’я</label>
-        <input class="form__input login__form-input" type="text" id="nameLogin" placeholder="Номер карти" required>
+        <label class="form__label login__label" for="nameLogin">Ім’я</label>
+        <input class="form__input login__form-input" type="text" id="nameLogin" placeholder="..." required>
 
-        <label class="form__label page__regular" for="emailLogin">Email</label>
-        <input class="form__input login__form-input" type="email" id="emailLogin" placeholder="example@mail.com">
+        <label class="form__label login__label" for="emailLogin">Email</label>
+        <input class="form__input login__form-input" type="email" id="emailLogin" placeholder="...">
 
-        <label class="form__label page__regular" for="passwordLogin">Пароль</label>
+        <label class="form__label login__label" for="passwordLogin">Пароль</label>
         <input class="form__input login__form-input" type="password" id="passwordLogin" placeholder="...">
 
-        <label class="form__label page__regular" for="passwordLogin2">Повторіть пароль</label>
+        <label class="form__label login__label" for="passwordLogin2">Повторіть пароль</label>
         <input class="form__input login__form-input" type="password" id="passwordLogin2" placeholder="...">
 
-        <div class="login__form-container">
-          <input checked type="checkbox" id="checkbox" class="login__form-chekbox">
-          <label class="login__form-chekbox-label" for="checkbox">Запам’ятати дані</label>
+        <div class="login__form-checkbox">
+          <input checked type="checkbox" id="checkbox" class="login__form-checkbox-input">
+          <label class="login__form-checkbox-label" for="checkbox">Запам’ятати дані</label>
         </div>
 
         <button type="submit" id="login" class="button form__buttons-add login__button-add">Зареєструватися</button>
@@ -67,13 +65,9 @@
       </a>
     </div>
 
-    <div class="header__switcher"></div>
-
     <a href="#menu" class="header__menu"></a>
   </header>
   <!--#endregion -->
-
-  <img src="images/rectangle.png" alt="background" class="page__background">
 
   <div class="page__grid">
     <!--#region menu -->

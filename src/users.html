@@ -14,7 +14,7 @@
 <body class="page__body">
 
   <!--#region header -->
-  <header class="header">
+  <header class="header header--small">
     <div class="header__container">
       <a href="/index.html" class="header__logo">
         <div class="header__logo-bg">
@@ -138,7 +138,8 @@
 
         <li class="menu__item">
           <a href="support.html" class="menu__link">
-            <svg class="icon menu__link-svg" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="icon menu__link-svg" width="42" height="42" viewBox="0 0 42 42" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M8.79316 32.5402C7.3071 31.0541 8.29275 27.9342 7.53635 26.1061C6.75225 24.2109 3.875 22.6857 3.875 20.6666C3.875 18.6475 6.75226 17.1223 7.53636 15.2273C8.29276 13.3991 7.3071 10.2792 8.79316 8.79316C10.2792 7.3071 13.3992 8.29275 15.2273 7.53635C17.1224 6.75225 18.6476 3.875 20.6667 3.875C22.6858 3.875 24.211 6.75226 26.1061 7.53636C27.9342 8.29276 31.0541 7.3071 32.5402 8.79316C34.0262 10.2792 33.0406 13.3992 33.797 15.2273C34.5811 17.1224 37.4583 18.6476 37.4583 20.6667C37.4583 22.6858 34.5811 24.211 33.797 26.1061C33.0406 27.9342 34.0262 31.0541 32.5402 32.5402C31.0541 34.0262 27.9342 33.0406 26.1061 33.797C24.2109 34.5811 22.6857 37.4583 20.6666 37.4583C18.6475 37.4583 17.1223 34.5811 15.2273 33.797C13.3991 33.0406 10.2792 34.0262 8.79316 32.5402Z"
                 stroke-width="2.06667" stroke-linecap="round" stroke-linejoin="round" />
@@ -161,9 +162,10 @@
     <div class="page__content">
       <!--#region offers -->
 
-      <h2 class="page__title">
-        Users
-      </h2>
+      <div class="page__headline">
+        <img class="icon" src="images/users.svg" alt="Користувачі">
+        <h5 class="page__headline-h5">Користувачі</h5>
+      </div>
 
       <div class="offers__slider">
         <div class="offers users">
@@ -343,72 +345,15 @@
               </div>
             </div>
 
-            <div class="offers__container users__container offers__container--active ">
-                <div class="offers__top users__top">
-                  <h5 class="offers__top-title page__label users__top-title offers__wrapper">
-                    <span>UID</span> 112 <span>Статус</span>
-                    <img class="icon__done" src="images/doneYellow.svg" alt="done yellow">
-                  </h5>
+            <div class="offers__container users__container">
+              <div class="offers__top users__top">
+                <h5 class="offers__top-title page__label users__top-title offers__wrapper">
+                  <span>UID</span> 112 <span>Статус</span>
+                  <img class="icon__done" src="images/doneYellow.svg" alt="done yellow">
+                </h5>
 
-                  <div class="offers__top-settings offers__top-settings--mobile">
-                    <div class="page__value users__value page__desktop">
-                      Бренд
-                    </div>
-
-                    <button class="icon__button editOffer">
-                      <img class="icon__button-img" src="images/settings.png" alt="settings">
-                    </button>
-
-                    <button class="icon__button" id="deleteOffer">
-                      <img class="icon__button--bin" src="images/bin.svg" alt="видалити" class="icon__button-bin">
-                    </button>
-                  </div>
-                </div>
-                
-                <div class="offers__wrapper users__wrapper page__mobile">
-                  <div class="page__value users__value">
-                    Бренд
-                  </div>
-                </div>
-
-                <div class="offers__wrapper users__wrapper">
-                  <div class="page__label">
-                    Нікнейм
-                  </div>
-                  <div class="page__value users__value">
-                    Mithlesha Kumara Singha
-                  </div>
-                </div>
-
-                <div class="offers__wrapper users__wrapper">
-                  <div class="page__label">
-                    Пошта
-                  </div>
-                  <div class="page__value users__value">
-                    Катманду, річка
-                  </div>
-                </div>
-
-                <div class="offers__wrapper users__wrapper">
-                  <div class="page__label">
-                    Баланс
-                  </div>
-                  <div class="page__value users__value">
-                    $122
-                  </div>
-                </div>
-
-                <div class="offers__wrapper users__wrapper">
-                  <div class="page__label ">
-                    Транзакції
-                  </div>
-                  <div class="page__value users__value">
-                    $1489
-                  </div>
-                </div>
-
-                <div class="offers__top-settings offers__top-settings--desktop">
-                  <div class="page__value users__value page__mo">
+                <div class="offers__top-settings offers__top-settings--mobile">
+                  <div class="page__value users__value page__desktop">
                     Бренд
                   </div>
 
@@ -420,6 +365,63 @@
                     <img class="icon__button--bin" src="images/bin.svg" alt="видалити" class="icon__button-bin">
                   </button>
                 </div>
+              </div>
+
+              <div class="offers__wrapper users__wrapper page__mobile">
+                <div class="page__value users__value">
+                  Бренд
+                </div>
+              </div>
+
+              <div class="offers__wrapper users__wrapper">
+                <div class="page__label">
+                  Нікнейм
+                </div>
+                <div class="page__value users__value">
+                  Mithlesha Kumara Singha
+                </div>
+              </div>
+
+              <div class="offers__wrapper users__wrapper">
+                <div class="page__label">
+                  Пошта
+                </div>
+                <div class="page__value users__value">
+                  Катманду, річка
+                </div>
+              </div>
+
+              <div class="offers__wrapper users__wrapper">
+                <div class="page__label">
+                  Баланс
+                </div>
+                <div class="page__value users__value">
+                  $122
+                </div>
+              </div>
+
+              <div class="offers__wrapper users__wrapper">
+                <div class="page__label ">
+                  Транзакції
+                </div>
+                <div class="page__value users__value">
+                  $1489
+                </div>
+              </div>
+
+              <div class="offers__top-settings offers__top-settings--desktop">
+                <div class="page__value users__value page__mo">
+                  Бренд
+                </div>
+
+                <button class="icon__button editOffer">
+                  <img class="icon__button-img" src="images/settings.png" alt="settings">
+                </button>
+
+                <button class="icon__button" id="deleteOffer">
+                  <img class="icon__button--bin" src="images/bin.svg" alt="видалити" class="icon__button-bin">
+                </button>
+              </div>
 
               <div class="info__roll">
                 <div class="info users__info">
@@ -570,7 +572,7 @@
               <button class="button users__roll">Згорнути</button>
             </div>
 
-            <div class="offers__container users__container users__container--open">
+            <div class="offers__container users__container">
               <div class="offers__top users__top">
                 <h5 class="offers__top-title page__label users__top-title offers__wrapper">
                   <span>UID</span> 112 <span>Статус</span>
@@ -698,10 +700,6 @@
                     </div>
 
                     <div class="users__payments-buttons">
-                      <button class="icon__button changePayment">
-                        <img class="icon__button-img" src="images/change.png" alt="change">
-                      </button>
-
                       <button class="icon__button editPayment">
                         <img class="icon__button-img" src="images/settings.png" alt="settings">
                       </button>
@@ -714,8 +712,24 @@
                         <img class="icon__button-img" src="images/delete.png" alt="delete">
                       </button>
 
-                      <button class="icon__button buttonDown">
-                        <img class="users__payments-icons icon__button--down" src="images/down.svg" alt="details">
+                      <button class="main__addCard-plus offers__add-button users__payments-buttons-add">
+                        <svg class="main__addCard-plus-svg" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7.07666 1C7.07666 0.447715 6.62894 0 6.07666 0C5.52438 0 5.07666 0.447715 5.07666 1V5.0773H1C0.447715 5.0773 0 5.52501 0 6.0773C0 6.62958 0.447715 7.0773 1 7.0773H5.07666V11.1545C5.07666 11.7068 5.52438 12.1545 6.07666 12.1545C6.62894 12.1545 7.07666 11.7068 7.07666 11.1545V7.0773H11.1545C11.7068 7.0773 12.1545 6.62958 12.1545 6.0773C12.1545 5.52501 11.7068 5.0773 11.1545 5.0773H7.07666V1Z"
+                            fill="url(#paint0_linear_4071_5331)" />
+                          <defs>
+                            <linearGradient id="paint0_linear_4071_5331" x1="6.07726" y1="0" x2="6.07726" y2="12.1545"
+                              gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#6CA5FC" />
+                              <stop offset="1" stop-color="#094FB8" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </button>
+
+                      <button class="icon__button buttonDown users__payments-buttons-buttonDown">
+                        <img class="users__payments-icons icon__button--down" src="images/downWhite.svg" alt="details">
                       </button>
                     </div>
                   </div>
@@ -785,7 +799,7 @@
               <button class="button users__roll">Згорнути</button>
             </div>
 
-            <div class="offers__container users__container users__container--open">
+            <div class="offers__container users__container">
               <div class="offers__top users__top">
                 <h5 class="offers__top-title page__label users__top-title offers__wrapper">
                   <span>UID</span> 112 <span>Статус</span>
@@ -913,10 +927,6 @@
                     </div>
 
                     <div class="users__payments-buttons">
-                      <button class="icon__button changePayment">
-                        <img class="icon__button-img" src="images/change.png" alt="change">
-                      </button>
-
                       <button class="icon__button editPayment">
                         <img class="icon__button-img" src="images/settings.png" alt="settings">
                       </button>
@@ -929,8 +939,24 @@
                         <img class="icon__button-img" src="images/delete.png" alt="delete">
                       </button>
 
-                      <button class="icon__button buttonDown">
-                        <img class="users__payments-icons icon__button--down" src="images/down.svg" alt="details">
+                      <button class="main__addCard-plus offers__add-button users__payments-buttons-add">
+                        <svg class="main__addCard-plus-svg" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7.07666 1C7.07666 0.447715 6.62894 0 6.07666 0C5.52438 0 5.07666 0.447715 5.07666 1V5.0773H1C0.447715 5.0773 0 5.52501 0 6.0773C0 6.62958 0.447715 7.0773 1 7.0773H5.07666V11.1545C5.07666 11.7068 5.52438 12.1545 6.07666 12.1545C6.62894 12.1545 7.07666 11.7068 7.07666 11.1545V7.0773H11.1545C11.7068 7.0773 12.1545 6.62958 12.1545 6.0773C12.1545 5.52501 11.7068 5.0773 11.1545 5.0773H7.07666V1Z"
+                            fill="url(#paint0_linear_4071_5331)" />
+                          <defs>
+                            <linearGradient id="paint0_linear_4071_5331" x1="6.07726" y1="0" x2="6.07726" y2="12.1545"
+                              gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#6CA5FC" />
+                              <stop offset="1" stop-color="#094FB8" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </button>
+
+                      <button class="icon__button buttonDown users__payments-buttons-buttonDown">
+                        <img class="users__payments-icons icon__button--down" src="images/downWhite.svg" alt="details">
                       </button>
                     </div>
                   </div>
@@ -1000,7 +1026,7 @@
               <button class="button users__roll">Згорнути</button>
             </div>
 
-            <div class="offers__container users__container users__container--open">
+            <div class="offers__container users__container">
               <div class="offers__top users__top">
                 <h5 class="offers__top-title page__label users__top-title offers__wrapper">
                   <span>UID</span> 112 <span>Статус</span>
@@ -1128,10 +1154,6 @@
                     </div>
 
                     <div class="users__payments-buttons">
-                      <button class="icon__button changePayment">
-                        <img class="icon__button-img" src="images/change.png" alt="change">
-                      </button>
-
                       <button class="icon__button editPayment">
                         <img class="icon__button-img" src="images/settings.png" alt="settings">
                       </button>
@@ -1144,8 +1166,24 @@
                         <img class="icon__button-img" src="images/delete.png" alt="delete">
                       </button>
 
-                      <button class="icon__button buttonDown">
-                        <img class="users__payments-icons icon__button--down" src="images/down.svg" alt="details">
+                      <button class="main__addCard-plus offers__add-button users__payments-buttons-add">
+                        <svg class="main__addCard-plus-svg" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7.07666 1C7.07666 0.447715 6.62894 0 6.07666 0C5.52438 0 5.07666 0.447715 5.07666 1V5.0773H1C0.447715 5.0773 0 5.52501 0 6.0773C0 6.62958 0.447715 7.0773 1 7.0773H5.07666V11.1545C5.07666 11.7068 5.52438 12.1545 6.07666 12.1545C6.62894 12.1545 7.07666 11.7068 7.07666 11.1545V7.0773H11.1545C11.7068 7.0773 12.1545 6.62958 12.1545 6.0773C12.1545 5.52501 11.7068 5.0773 11.1545 5.0773H7.07666V1Z"
+                            fill="url(#paint0_linear_4071_5331)" />
+                          <defs>
+                            <linearGradient id="paint0_linear_4071_5331" x1="6.07726" y1="0" x2="6.07726" y2="12.1545"
+                              gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#6CA5FC" />
+                              <stop offset="1" stop-color="#094FB8" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </button>
+
+                      <button class="icon__button buttonDown users__payments-buttons-buttonDown">
+                        <img class="users__payments-icons icon__button--down" src="images/downWhite.svg" alt="details">
                       </button>
                     </div>
                   </div>
@@ -1169,7 +1207,6 @@
                       Дата оплати
                     </div>
                     <div class="page__value users__payments-value">
-
                       10 грудня 2024 р
                     </div>
 
@@ -1216,17 +1253,15 @@
               <button class="button users__roll">Згорнути</button>
             </div>
           </div>
-
         </div>
-        <button class="page__arrow page__arrow-prev">
+        <!-- <button class="page__arrow page__arrow-prev">
           <img src="images/arrow.svg" alt="" class="main__cards-arrow main__cards-arrow--prev">
         </button>
 
         <button class="page__arrow page__arrow-next">
           <img src="images/arrow.svg" alt="" class="main__cards-arrow">
-        </button>
+        </button> -->
       </div>
-
 
       <!--#endregion -->
     </div>
@@ -1237,7 +1272,7 @@
   <!--#region editOffer-->
   <div class="form" id="formEditOffer">
     <form action="" class="form__container">
-      <h5 class="form__title">Редагувати офер</h5>
+      <h5 class="form__title">Редагувати данні користувача</h5>
 
       <label class="form__label" for="name">Нікнейм</label>
       <input class="form__input" type="text" id="name" placeholder="..." required>
@@ -1259,13 +1294,75 @@
   </div>
   <!--#endregion -->
 
+  <!--#region editTransaction-->
+  <div class="form" id="formEditTransacrion">
+    <form action="" class="form__container">
+      <h5 class="form__title">Редагувати транзакцію</h5>
+
+      <label class="form__label" for="number2">Номер</label>
+      <input class="form__input" type="text" id="number3" placeholder="EKG464SJFN17" required>
+
+      <label class="form__label page__regular" for="data3">Дата рахунку</label>
+      <input class="form__input" id="data2" placeholder="10 грудня 2024 р." required>
+
+      <label class="form__label page__regular" for="paymentData3">Дата оплати</label>
+      <input class="form__input" type="password" id="paymentData3" placeholder="10 грудня 2024 р." required>
+
+      <label class="form__label page__regular" for="paymentMethod3">Спосіб оплати</label>
+      <input class="form__input" type="number" id="paymentMethod3" placeholder="0077 **** **** 3814 (Visa)" required>
+
+      <label class="form__label page__regular" for="subscription3">Підписка</label>
+      <input class="form__input" type="email" id="subscription3" placeholder="Бонус (річний)">
+
+      <label class="form__label page__regular" for="payment3">Сума</label>
+      <input class="form__input" type="number" id="payment3" placeholder="$129.88" required>
+
+      <div class="form__buttons">
+        <button class="button button--cancel">Відмінити</button>
+        <button type="submit" class="button form__buttons-add">Зберегти</button>
+      </div>
+    </form>
+  </div>
+  <!--#endregion -->
+
+  <!--#region addTransaction-->
+  <div class="form" id="formAddTransacrion">
+    <form action="" class="form__container">
+      <h5 class="form__title">Додати транзакцію</h5>
+
+      <label class="form__label" for="number">Номер</label>
+      <input class="form__input" type="text" id="number" placeholder="EKG464SJFN17" required>
+
+      <label class="form__label page__regular" for="data">Дата рахунку</label>
+      <input class="form__input" id="data" placeholder="10 грудня 2024 р." required>
+
+      <label class="form__label page__regular" for="paymentData">Дата оплати</label>
+      <input class="form__input" type="password" id="paymentData" placeholder="10 грудня 2024 р." required>
+
+      <label class="form__label page__regular" for="paymentMethod">Спосіб оплати</label>
+      <input class="form__input" type="number" id="paymentMethod" placeholder="0077 **** **** 3814 (Visa)" required>
+
+      <label class="form__label page__regular" for="subscription">Підписка</label>
+      <input class="form__input" type="email" id="subscription" placeholder="Бонус (річний)">
+
+      <label class="form__label page__regular" for="payment">Сума</label>
+      <input class="form__input" type="number" id="payment" placeholder="$129.88" required>
+
+      <div class="form__buttons">
+        <button class="button button--cancel">Відмінити</button>
+        <button type="submit" class="button form__buttons-add">Зберегти</button>
+      </div>
+    </form>
+  </div>
+  <!--#endregion -->
+
   <!--#region EditPayment-->
   <div class="form" id="formEditPayment">
     <form action="" class="form__container">
       <h5 class="form__title">Заміна данних платежу</h5>
 
-      <label class="form__label" for="cardNumber">Номер</label>
-      <input class="form__input" type="number" id="cardNumber" placeholder="Номер карти" length="16" required>
+      <label class="form__label" for="cardNumber2">Номер</label>
+      <input class="form__input" type="number" id="cardNumber2" placeholder="Номер карти" length="16" required>
 
       <div class="form__flex">
         <div class="form__flex-container">

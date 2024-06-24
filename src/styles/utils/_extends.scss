@@ -13,3 +13,9 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
+
+%after {
+  position: absolute;
+  display: block;
+  content: '';
+}

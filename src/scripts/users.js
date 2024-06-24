@@ -16,8 +16,10 @@ const rollLists = document.querySelectorAll(".users__payments-roll");
 const rolls = document.querySelectorAll(".users__roll");
 const infos = document.querySelectorAll(".info__roll");
 const downButtons = document.querySelectorAll(".buttonDown");
+const addButtons = document.querySelectorAll(".offers__add-button");
 const formEditOffer = document.getElementById("formEditOffer");
 const formEditPayment = document.getElementById("formEditPayment");
+const formAddTransacrion = document.getElementById("formAddTransacrion");
 const formChangePayment = document.getElementById("formChangePayment");
 const buttonsEditOffer = document.querySelectorAll(".editOffer");
 const shadow = document.querySelector(".shadow");
@@ -39,6 +41,11 @@ rolls.forEach((r, i) => r.addEventListener("click", () => {
 buttonsEditOffer.forEach(b => b.addEventListener("click", () => {
   shadow.style.transform = "none";
   formEditOffer.style.transform = "none";
+}));
+
+addButtons.forEach(b => b.addEventListener("click", () => {
+  shadow.style.transform = "none";
+  formAddTransacrion.style.transform = "none";
 }));
 
 downButtons.forEach((d, i) => d.addEventListener("click", () => {
@@ -69,6 +76,7 @@ buttonsClose.forEach(btn => btn.addEventListener("click", () => {
   formEditPayment.style.transform = "scale(0)";
   formChangePayment.style.transform = "scale(0)";
   formEditOffer.style.transform = "scale(0)";
+  formAddTransacrion.style.transform = "scale(0)";
 }));
 
 

@@ -80,6 +80,7 @@
       gap: 10px;
 
       &--active {
+
         .page__label,
         .offers__value,
         .offers__value-subtitle,
@@ -127,7 +128,7 @@
 
     @include onDesktop {
       display: grid;
-      background:#0E1218;
+      background: #0E1218;
       margin-bottom: 30px;
       padding: 32px;
       gap: 0;
@@ -353,19 +354,38 @@
   }
 
   &__payout {
+    margin: 22px 0 0;
+
     @include onDesktop {
       display: none;
     }
 
+    &--inForm {
+      margin: 0 -10px 22px;
+    }
+
     &-btn {
-      background-color:#181A1E;
+      background-color: #181A1E;
       padding: 10px 15px;
       font-size: 12px;
       font-weight: 400;
       line-height: 14.1px;
+      position: relative;
 
       &--active {
         background: #3334FF;
+      }
+
+      &--arrow {
+        &::after {
+          display: block;
+          content: url(../../src/images/downSelect.svg);
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          pointer-events: none;
+        }
       }
     }
   }

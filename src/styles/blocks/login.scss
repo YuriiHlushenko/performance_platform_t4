@@ -6,8 +6,8 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #fff;
-  display: none;
+  background-color: #0A0A0A;
+  // display: none;
 
   &__header {
     background-image: url(/images/loginMobile.png);
@@ -17,16 +17,52 @@
     background-size: contain;
 
     @include onDesktop {
+      background-image: url(/images/loginTablet.png);
+    }
+
+    @include onDesktop {
       background-image: url(/images/loginDesktop.png);
+    }
+  }
+
+  &__title {
+    font-size: 26px;
+
+    @include onTablet {
+      font-size: 41px;
+
+    }
+  }
+
+  &__label {
+    @include onTablet {
+      font-size: 21px;
+      margin-bottom: 8px;
     }
   }
 
   &__button {
     background: none;
     background-color: #2E65F3;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3em;
+
+    @include onTablet {
+      font-size: 25px;
+    }
 
     &--active {
-      background-color: #124897;
+      background-color: #181A1E;
+    }
+
+    &-add {
+      @include onTablet {
+        display: block;
+        padding: 28px 34px;
+        width: 70%;
+        font-size: 25px;
+      }
     }
   }
 
@@ -35,20 +71,29 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 5px;
     margin-bottom: 16px;
+
+    @include onTablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__logo {
     display: flex;
     gap: 14px;
     align-items: center;
-    padding: 33px 120px 27px 18px;
+    padding: 45px 120px 34px 25px;
+
+    @include onTablet {
+      padding: 98px 0 79px 98px;
+      gap: 33px;
+    }
 
     @include onDesktop {
       padding: 0;
       position: absolute;
       flex-direction: column;
       gap: 60px;
-     bottom: 30%;
+      bottom: 30%;
       right: 5%;
     }
 
@@ -64,17 +109,25 @@
     &-img {
       width: 54px;
 
+      @include onTablet {
+        @include square(105px);
+      }
+
       @include onDesktop {
         @include square(300px);
       }
     }
 
     &-title {
+      font-family: "DM Sans", sans-serif;
       font-size: 32px;
       font-weight: 400;
-      line-height: 41.66px;
-      text-align: left;
+      line-height: 1.3em;
       margin: 0;
+
+      @include onTablet {
+        font-size: 55px;
+      }
 
       @include onDesktop {
         display: block;
@@ -87,17 +140,30 @@
 
   &__form {
     transform: none;
-    top: 10%;
+    margin: 0;
+    padding: 147px 26px 0;
+    background: none;
+    box-shadow: none;
+    box-sizing: border-box;
+
+    @include onTablet {
+      padding: 282px 38px 0;
+    }
 
     @include onDesktop {
       width: 455px;
+      padding: 0;
       position: absolute;
       left: 25%;
-      top:50%;
+      top: 50%;
       transform: translateX(-50%) translateY(-50%);
     }
 
     &-container {
+      position: static;
+      transform: none;
+      margin: 0 0 16px;
+      padding: 0;
       background: none;
       box-shadow: none;
     }
@@ -106,11 +172,37 @@
       background: none;
     }
 
-    &-container {
+    &-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       margin-bottom: 16px;
+
+      @include onTablet {
+        margin-bottom: 23px;
+      }
+
+      &-input {
+        margin: 0;
+
+        @include onTablet {
+          font-size: 21px;
+          @include square(31px)
+        }
+      }
+
+      &-label {
+        font-family: "DM Sans", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.3em;
+
+        @include onTablet {
+          font-size: 21px;
+        }
+      }
     }
   }
-
 
   &__button-add {
     display: block;

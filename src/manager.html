@@ -262,8 +262,8 @@
           </div>
 
           <div class="account__managment">
-            <button class="button account__button">Редагувати</button>
-            <button class="button account__button">Видалити</button>
+            <button class="button account__button" id="editProfile">Редагувати</button>
+            <button class="button account__button" id="deleteProfile">Видалити</button>
             <button class="button account__button">Вихід</button>
           </div>
         </div>
@@ -875,6 +875,52 @@
   <!--#endregion -->
   <div class="shadow"></div>
 
+  <!--#region editProfile-->
+  <div class="form" id="formEditProfile">
+    <form action="" class="form__container">
+      <h5 class="form__title">Редагувати профіль</h5>
+
+      <label class="form__label" for="name">Ім'я</label>
+      <input class="form__input" type="text" id="name0" placeholder="..." required>
+
+      <label class="form__label page__regular" for="surname">Прізвище</label>
+      <input class="form__input" type="text" id="surname" placeholder="..." required>
+
+      <label class="form__label page__regular" for="phone0">Номер Телефону</label>
+      <input class="form__input" type="number" id="phone0" placeholder="..." required>
+
+      <label class="form__label page__regular" for="email">Пошта</label>
+      <input class="form__input" type="email" id="email0" placeholder="..." required>
+
+      <label class="form__label page__regular" for="password0">Пароль</label>
+      <input class="form__input" type="password" id="password0" placeholder="..." required>
+
+      <div class="form__buttons">
+        <button class="button button--cancel" type="button">Відмінити</button>
+        <button type="submit" class="button form__buttons-add">Зберегти</button>
+      </div>
+    </form>
+  </div>
+  <!--#endregion -->
+
+  <!--#region deleteProfile-->
+  <div class="form" id="formDeleteProfile">
+    <form action="" class="form__container">
+      <h5 class="form__title form__title--center">Видалити профіль</h5>
+
+      <div class="form__line"></div>
+
+      <div class="form__warning">
+        Ви впевнені що хочете видалити профіль назавжди?
+      </div>
+
+      <div class="form__buttons form__buttons--center">
+        <button type="submit" class="button form__buttons-add">Видалити</button>
+      </div>
+    </form>
+  </div>
+  <!--#endregion -->
+
   <!--#region editOffer-->
   <div class="form" id="formEditOffer">
     <form action="" class="form__container">
@@ -886,13 +932,20 @@
       <label class="form__label page__regular" for="brend">Бренд</label>
       <input class="form__input" type="text" id="brend" placeholder="..." required>
 
-
       <label class="form__label page__regular" for="payments">Виплати</label>
       <input class="form__input" type="number" id="payments" placeholder="..." required>
 
-
       <label class="form__label page__regular" for="balance">Баланс</label>
       <input class="form__input" type="number" id="balance" placeholder="..." required>
+
+      <label class="form__label page__regular">Модель оплати</label>
+      <div class="page__buttons offers__payout offers__payout--inForm">
+        <button class="button offers__payout-btn offers__payout-btn--arrow offers__payout-btn--active">RevShare</button>
+        <button class="button offers__payout-btn offers__payout-btn--arrow">CPL</button>
+        <button class="button offers__payout-btn offers__payout-btn--arrow">CPC</button>
+        <button class="button offers__payout-btn">CPM</button>
+        <button class="button offers__payout-btn">CPH</button>
+      </div>
 
       <div class="form__buttons">
         <button class="button button--cancel">Відмінити</button>
@@ -913,13 +966,20 @@
       <label class="form__label page__regular" for="brend2">Бренд</label>
       <input class="form__input" type="text" id="brend2" placeholder="..." required>
 
-
       <label class="form__label page__regular" for="payments2">Виплати</label>
       <input class="form__input" type="number" id="payments2" placeholder="..." required>
 
-
       <label class="form__label page__regular" for="balance2">Баланс</label>
       <input class="form__input" type="number" id="balance2" placeholder="..." required>
+
+      <label class="form__label page__regular">Модель оплати</label>
+      <div class="page__buttons offers__payout offers__payout--inForm">
+        <button class="button offers__payout-btn offers__payout-btn--arrow offers__payout-btn--active">RevShare</button>
+        <button class="button offers__payout-btn offers__payout-btn--arrow">CPL</button>
+        <button class="button offers__payout-btn offers__payout-btn--arrow">CPC</button>
+        <button class="button offers__payout-btn">CPM</button>
+        <button class="button offers__payout-btn">CPH</button>
+      </div>
 
       <div class="form__buttons">
         <button class="button button--cancel">Відмінити</button>
