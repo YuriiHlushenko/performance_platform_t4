@@ -10,6 +10,7 @@
 //   document.form.reset();
 // }
 
+const forms = document.querySelectorAll(".form");
 const buttonsClose = document.querySelectorAll(".button--cancel");
 const containers = document.querySelectorAll(".offers__container");
 const rollLists = document.querySelectorAll(".users__payments-roll");
@@ -17,30 +18,28 @@ const rolls = document.querySelectorAll(".users__roll");
 const infos = document.querySelectorAll(".info__roll");
 const downButtons = document.querySelectorAll(".buttonDown");
 const addButtons = document.querySelectorAll(".offers__add-button");
-const formEditOffer = document.getElementById("formEditOffer");
-const formEditPayment = document.getElementById("formEditPayment");
 const formAddTransacrion = document.getElementById("formAddTransacrion");
 const formChangePayment = document.getElementById("formChangePayment");
-const buttonsEditOffer = document.querySelectorAll(".editOffer");
 const shadow = document.querySelector(".shadow");
-const buttonsEditPayment = document.querySelectorAll(".editPayment");
 const buttonsChangePayment = document.querySelectorAll(".changePayment");
+
+['Balance', 'Notification', 'Debiting', 'Lids', 'Payment', 'Offer', 'Approve'].forEach(w => {
+  document.querySelectorAll(`.edit${w}`).forEach(b => {
+    b.addEventListener('click', () => {
+      shadow.style.transform = "none";
+      document.getElementById(`formEdit${w}`).style.transform = "none";
+    })
+  })
+});
 
 rolls.forEach((r, i) => r.addEventListener("click", () => {
   if (infos[i].style.display === 'block') {
     infos[i].style.display = 'none';
-    // containers[i + 1].classList.remove('users__container--open');
     r.innerHTML = 'Розгорнути';
   } else {
     infos[i].style.display = 'block';
-    // containers[i + 1].classList.add('users__container--open');
     r.innerHTML = 'Згорнути';
   }
-}));
-
-buttonsEditOffer.forEach(b => b.addEventListener("click", () => {
-  shadow.style.transform = "none";
-  formEditOffer.style.transform = "none";
 }));
 
 addButtons.forEach(b => b.addEventListener("click", () => {
@@ -61,10 +60,6 @@ downButtons.forEach((d, i) => d.addEventListener("click", () => {
   }
 }));
 
-buttonsEditPayment.forEach(b => b.addEventListener("click", () => {
-  shadow.style.transform = "none";
-  formEditPayment.style.transform = "none";
-}));
 
 buttonsChangePayment.forEach(b => b.addEventListener("click", () => {
   shadow.style.transform = "none";
@@ -73,12 +68,8 @@ buttonsChangePayment.forEach(b => b.addEventListener("click", () => {
 
 buttonsClose.forEach(btn => btn.addEventListener("click", () => {
   shadow.style.transform = "scale(0)";
-  formEditPayment.style.transform = "scale(0)";
-  formChangePayment.style.transform = "scale(0)";
-  formEditOffer.style.transform = "scale(0)";
-  formAddTransacrion.style.transform = "scale(0)";
+  forms.forEach(f => f.style.transform = "scale(0)")
 }));
-
 
 window.addEventListener('hashchange', () => {
   if (window.location.hash === '#menu') {

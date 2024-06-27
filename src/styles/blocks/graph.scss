@@ -18,6 +18,14 @@
     margin-bottom: 0;
   }
 
+  &--desktop {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+    }
+  }
+
   &__bg {
     position: absolute;
     bottom: -7px;

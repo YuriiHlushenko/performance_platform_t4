@@ -13,12 +13,13 @@
 const buttonsClose = document.querySelectorAll(".button--cancel");
 const forms = document.querySelectorAll(".form");
 const buttonAddOffer = document.getElementById("addOffer");
-const buttonEditOffer = document.getElementById("editOffer");
+const buttonsEditOffer = document.querySelectorAll(".editOffer");
 const buttonEditProfile = document.getElementById("editProfile");
 const buttonDeleteProfile = document.getElementById("deleteProfile");
 const shadow = document.querySelector(".shadow");
 const formAddOffer = document.getElementById("formAddOffer");
 const formEditProfile = document.getElementById("formEditProfile");
+const formEditOffer = document.getElementById("formEditOffer");
 const formDeleteProfile = document.getElementById("formDeleteProfile");
 
 buttonAddOffer.addEventListener("click", () => {
@@ -26,15 +27,11 @@ buttonAddOffer.addEventListener("click", () => {
   formAddOffer.style.transform = "none";
 });
 
-buttonEditOffer.addEventListener("click", () => {
+buttonsEditOffer.forEach(b => b.addEventListener("click", () => {
   shadow.style.transform = "none";
   formEditOffer.style.transform = "none";
-});
+}));
 
-buttonEditOffer.addEventListener("click", () => {
-  shadow.style.transform = "none";
-  formEditOffer.style.transform = "none";
-});
 
 buttonEditProfile.addEventListener("click", () => {
   shadow.style.transform = "none";
@@ -44,18 +41,15 @@ buttonEditProfile.addEventListener("click", () => {
 buttonDeleteProfile.addEventListener("click", () => {
   shadow.style.transform = "none";
   formDeleteProfile.style.transform = "none";
-});
+  formDeleteProfile.addEventListener("click", () => {
+      shadow.style.transform = "scale(0)";
+      formDeleteProfile.style.transform = "scale(0)";
+})});
 
 buttonsClose.forEach(btn => btn.addEventListener("click", () => {
   shadow.style.transform = "scale(0)";
   forms.forEach(f => f.style.transform = "scale(0)")
 }));
-
-forms.forEach(btn => btn.addEventListener("click", () => {
-  shadow.style.transform = "scale(0)";
-  forms.forEach(f => f.style.transform = "scale(0)")
-}));
-
 
 window.addEventListener('hashchange', () => {
   if (window.location.hash === '#menu') {

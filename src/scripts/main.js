@@ -12,6 +12,16 @@ const buttonsTopUp = document.querySelectorAll(".topUp");
 const buttonLogin = document.getElementById("login");
 const login = document.querySelector(".login");
 
+
+// ['Widthraw', 'TopUp', 'AddCard'].forEach(w => {
+//   document.querySelectorAll(w[0].toLowerCase() + w.substring(1)).forEach(b => {
+//     b.addEventListener('click', () => {
+//       shadow.style.transform = "none";
+//       document.getElementById(`form${w}`).style.transform = "none";
+//     })
+//   })
+// });
+
 buttonsWidthraw.forEach(b => b.addEventListener("click", () => {
   shadow.style.transform = "none";
   formWidthraw.style.transform = "none";

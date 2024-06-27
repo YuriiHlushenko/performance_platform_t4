@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./styles/main.scss">
   <script type="text/javascript" src="scripts/main.js" defer></script>
   <script type="text/javascript" src="scripts/menu.js" defer></script>
+  <script type="text/javascript" src="scripts/cards.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -82,15 +83,16 @@
 
         <li class="menu__item">
           <a href="manager.html" class="menu__link">
-            <svg class="icon menu__link-svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+            <svg class="icon menu__link-svg" width="42" height="42" viewBox="0 0 42 42" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
-                d="M10 12.5C12.7614 12.5 15 10.2614 15 7.5C15 4.73858 12.7614 2.5 10 2.5C7.23858 2.5 5 4.73858 5 7.5C5 10.2614 7.23858 12.5 10 12.5Z"
-                stroke-miterlimit="10" />
+                d="M20.6654 25.8332C26.3723 25.8332 30.9987 21.2068 30.9987 15.4998C30.9987 9.79289 26.3723 5.1665 20.6654 5.1665C14.9584 5.1665 10.332 9.79289 10.332 15.4998C10.332 21.2068 14.9584 25.8332 20.6654 25.8332Z"
+                stroke-width="2.06667" stroke-miterlimit="10" />
               <path
-                d="M2.42114 16.8743C3.18955 15.5442 4.29443 14.4398 5.6248 13.672C6.95517 12.9042 8.46417 12.5 10.0002 12.5C11.5363 12.5 13.0453 12.9043 14.3756 13.6721C15.706 14.44 16.8108 15.5444 17.5792 16.8744"
-                stroke-linecap="round" stroke-linejoin="round" />
+                d="M5.00391 34.8736C6.59195 32.1249 8.87537 29.8425 11.6248 28.2557C14.3742 26.6688 17.4928 25.8335 20.6673 25.8335C23.8418 25.8335 26.9604 26.669 29.7098 28.2558C32.4592 29.8427 34.7426 32.1252 36.3306 34.874"
+                stroke-width="2.06667" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
+
             Менеджер
           </a>
         </li>
@@ -309,8 +311,8 @@
             <div class="main__balance-value">$85,400.00</div>
           </div>
           <div class="page__buttons">
-            <button id="withdraw" class="button withdraw">Вивести баланс</button>
-            <button id="topUp" class="button topUp">Поповнити баланс</button>
+            <button id="withdraw" class="button button--balance withdraw">Вивести баланс</button>
+            <button id="topUp" class="button button--balance topUp">Поповнити баланс</button>
           </div>
         </div>
     </div>
@@ -358,13 +360,13 @@
       <h5 class="form__title">Вивести баланс</h5>
 
       <label class="form__label" for="Name">Ім'я</label>
-      <input class="form__input" type="text" id="Name" placeholder="Ім'я" length="16" required>
+      <input class="form__input" type="text" id="Name" placeholder="..." length="16" required>
 
       <label class="form__label" for="cardNumber2">Номер карти</label>
-      <input class="form__input" type="number" id="cardNumber2" placeholder="Номер карти" length="16" required>
+      <input class="form__input" type="number" id="cardNumber2" placeholder="..." length="16" required>
 
       <label class="form__label page__regular" for="email">Пошта</label>
-      <input class="form__input" type="email" id="email" placeholder="example@mail.com">
+      <input class="form__input" type="email" id="email" placeholder="...">
 
       <label class="form__label page__regular" for="payment2">Вивести суму</label>
       <input class="form__input" type="number" id="payment2" placeholder="...">
@@ -383,7 +385,7 @@
       <h5 class="form__title">Поповнення балансу</h5>
 
       <label class="form__label" for="cardNumber3">Номер карти</label>
-      <input class="form__input" type="number" id="cardNumber3" placeholder="Номер карти" length="16" required>
+      <input class="form__input" type="number" id="cardNumber3" placeholder="..." length="16" required>
 
       <div class="form__flex">
         <div class="form__flex-container">
@@ -408,7 +410,7 @@
 
         <div class="form__flex-container">
           <label class="form__label page__regular" for="email3">Email</label>
-          <input class="form__input" type="email" id="email3" placeholder="example@mail.com">
+          <input class="form__input" type="email" id="email3" placeholder="...">
         </div>
       </div>
 

@@ -7,7 +7,7 @@
   top: 0;
   bottom: 0;
   background-color: #0A0A0A;
-  // display: none;
+  display: none;
 
   &__header {
     background-image: url(/images/loginMobile.png);
@@ -153,14 +153,14 @@
     @include onDesktop {
       width: 455px;
       padding: 0;
-      position: absolute;
+      position: relative;
       left: 25%;
-      top: 50%;
-      transform: translateX(-50%) translateY(-50%);
+      // top: 50%;
+      transform: translateX(-50%);
     }
 
     &-container {
-      position: static;
+      position: initial;
       transform: none;
       margin: 0 0 16px;
       padding: 0;

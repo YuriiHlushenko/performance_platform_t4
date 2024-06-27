@@ -21,12 +21,12 @@ window.onload = function() {
 const buttonsClose = document.querySelectorAll(".button--cancel");
 const formAddOffer = document.getElementById("formAddOffer");
 const shadow = document.querySelector(".shadow");
-const buttonsAddOffer = document.querySelectorAll(".addOffer");
+const buttonAddOffer = document.getElementById("addOffer");
 
-buttonsAddOffer.forEach(b => b.addEventListener("click", () => {
+buttonAddOffer.addEventListener("click", () => {
   shadow.style.transform = "none";
   formAddOffer.style.transform = "none";
-}));
+});
 
 buttonsClose.forEach(btn => btn.addEventListener("click", () => {
   shadow.style.transform = "scale(0)";

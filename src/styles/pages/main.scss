@@ -33,7 +33,7 @@
     }
 
     &-container {
-      overflow-x: auto;
+      overflow-x: hidden;
     }
   }
 
@@ -41,40 +41,33 @@
     display: flex;
     align-items: center;
     position: relative;
+    transition: all $duration;
+    padding-left: 16vw;
 
-    padding: 0 70px;
+    // padding: 0 70px;
 
     @include onDesktop {
+      width: 100%;
       display: flex;
       gap: 30px;
+      padding: 0;
     }
 
     &-container {
       flex-shrink: 0;
-      width: calc(100vw - 140px);
+      width: 68vw;
       box-sizing: border-box;
-
-      @include onTablet {
-        padding: 0 50px;
-        width: calc(100vw - 32px);
-      }
 
       @include onDesktop {
         padding: 0;
         width: initial;
-        // flex-shrink: 1;
-      }
-
-      &:nth-child(2),
-      &:nth-child(3) {
-        transform: scale(0.88);
+        flex-shrink: 1;
       }
     }
 
     &-card {
       width: 100%;
-
-      @extend %shadow;
+      box-shadow: 0px 4px 20px 0px #00000040;
     }
 
     &-add {
@@ -133,7 +126,7 @@
 
   &__balance {
     color: var(--text--white);
-    padding: 30px 20px 40px;
+    padding: 56px 20px 66px;
     background-color: var(--bg--box);
     margin: 12px 0;
 
@@ -154,7 +147,7 @@
     &-title {
       font-size: 17px;
       font-weight: 500;
-      margin: 0 0 53px;
+      margin: 0 0 27px;
       letter-spacing: -0.02em;
 
       @include onTablet {

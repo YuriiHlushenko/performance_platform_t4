@@ -44,28 +44,6 @@
     background: #141417;
   }
 
-  // &--theme-dark {
-  //   --text--black: #fff;
-  //   --text--white: #000;
-  //   --text--grey: #fff;
-  //   --text--blue: #b9d0ec;
-  //   --color--page: #fff;
-  //   --bg--page: #292a2c;
-  //   --bg--box: #75777e;
-  //   --bg-offers-box: #9a9ca3;
-  //   --bg-menu-items: #10366e;
-  //   --bg-menu-items--active: #051329;
-
-  //   --color-header: #fff;
-  //   --bg-header: linear-gradient(180deg, #2254a0 0%, #193c75 100%, #03080f 100%);
-  //   --button--bg: linear-gradient(90deg, #163c75 0%, #316EC9 57%, #0149B4 100%);
-
-  //   .header__switcher::after {
-  //     transform: translateX(100%);
-  //   }
-  // }
-
-
   &__body {
     margin: 0 auto;
     // position: relative;
@@ -137,6 +115,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 12px;
+    gap: 7px;
 
     @include onTablet {
       padding: 16px 16px 24px 16px;
@@ -259,19 +238,17 @@
   &__label {
     font-size: 22px;
     font-weight: 400;
-    line-height: 25.85px;
+    line-height: 1.3em;
     margin-bottom: 6px;
     color: var(--text--white);
 
     @include onTablet {
       font-size: 45.47px;
-      line-height: 53.42px;
       margin-bottom: 12px;
     }
 
     @include onDesktop {
       font-size: 20px;
-      line-height: 23.5px;
       width: max-content;
       margin: 0;
       display: flex;
@@ -282,14 +259,13 @@
   &__value {
     font-size: 17px;
     font-weight: 400;
-    line-height: 19.98px;
+    line-height: 1.3em;
     margin-bottom: 12px;
     color: var(--text--white);
 
     @include onTablet {
       margin-bottom: 24px;
       font-size: 35.13px;
-
     }
 
     @include onDesktop {
@@ -373,10 +349,13 @@
 }
 
 .select {
+  display: flex;
+  justify-content: center;
   position: relative;
+  width: min-content;
 
   &__select {
-    color: var(--text--black);
+    color: var(--text--white);
     position: relative;
     appearance: none;
     border: none;
@@ -391,27 +370,29 @@
 
   &__options {
     position: absolute;
-    // margin: 0;
-    bottom: 0;
+    margin: 0;
+    top: 0;
     background-color: var(--bg--box);
-    right: -22px;
+    left: -50%;
     padding: 10px 4px;
     list-style: none;
     text-align: center;
     border-radius: 20px;
+    transform: translateX(calc(50% - 4px));
+    z-index: 3;
 
     @extend %shadow;
 
     & li {
       position: relative;
       cursor: pointer;
-      padding: 10px 22px;
+      padding: 10px 12px;
       border-radius: 20px;
-      color: #000;
+      color: var(--text--white);
     }
 
     &--active {
-      background-color: $payout;
+      background-color: var(--items--active);
       color: var(--text--black);
     }
   }
@@ -429,6 +410,10 @@
 
     @include onDesktop {
       display: block;
+    }
+
+    &--popUp {
+      display: initial;
     }
   }
 }
