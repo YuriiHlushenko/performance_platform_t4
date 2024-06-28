@@ -14,9 +14,8 @@
 
   @include onTablet {
     grid-template-columns: 455px 1fr;
-    top: 108px;
-    height: calc(100vh - 108px);
-    background-color: $main;
+    top: 132px;
+    height: calc(100vh - 132px);
   }
 
   @include onDesktop {
@@ -94,6 +93,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
+    line-height: 1.3em;
     text-decoration: none;
     color: $white;
 
@@ -104,14 +104,12 @@
     }
 
     @include onTablet {
-      font-size: 33.07px;
-      line-height: 38.85px;
+      font-size: 33px;
       gap: 16px;
     }
 
     @include onDesktop {
       font-size: 16px;
-      line-height: 18.8px;
       padding: 20px;
       text-align: center;
       box-sizing: border-box;

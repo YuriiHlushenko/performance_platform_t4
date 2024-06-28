@@ -32,7 +32,6 @@ buttonsEditOffer.forEach(b => b.addEventListener("click", () => {
   formEditOffer.style.transform = "none";
 }));
 
-
 buttonEditProfile.addEventListener("click", () => {
   shadow.style.transform = "none";
   formEditProfile.style.transform = "none";

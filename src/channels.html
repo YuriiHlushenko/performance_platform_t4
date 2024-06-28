@@ -7,7 +7,7 @@
   <title>Manager Neurolide</title>
   <link rel="icon" type="image/x-icon" href="images/logo.svg">
   <link rel="stylesheet" href="./styles/main.scss">
-  <script type="text/javascript" src="scripts/chanels.js" defer></script>
+  <script type="text/javascript" src="scripts/channels.js" defer></script>
   <script type="text/javascript" src="scripts/menu.js" defer></script>
   <script type="text/javascript" src="scripts/select.js" defer></script>
 </head>
@@ -15,7 +15,7 @@
 <body class="page__body">
 
   <!--#region header -->
-  <header class="header">
+  <header class="header header--small">
     <div class="header__container">
       <a href="/index.html" class="header__logo">
         <div class="header__logo-bg">
@@ -24,8 +24,6 @@
         <h1 class="header__logo-title">Neurolide</h1>
       </a>
     </div>
-
-    <div class="header__switcher"></div>
 
     <a href="#menu" class="header__menu"></a>
   </header>
@@ -72,7 +70,7 @@
         </li>
 
         <li class="menu__item">
-          <a href="chanels.html" class="menu__link">
+          <a href="channels.html" class="menu__link">
             <svg class="icon menu__link-svg" width="38" height="38" viewBox="0 0 38 38" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M14.0156 22.2542H23.3156" stroke-width="2.06667" stroke-linecap="round"
@@ -162,26 +160,13 @@
     <!--#endregion -->
 
     <!--#region account -->
-    <div class="page__content page__content--chanels">
-      <div class="page__container offers__add">
-        <h2 class="page__title">
-          Your Chanels
-        </h2>
+    <div class="page__content page__content--channels">
 
-        <button class="main__addCard-plus offers__add-button" id="addChanel">
-          <svg class="main__addCard-plus-svg" width="13" height="13" viewBox="0 0 13 13" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M7.07666 1C7.07666 0.447715 6.62894 0 6.07666 0C5.52438 0 5.07666 0.447715 5.07666 1V5.0773H1C0.447715 5.0773 0 5.52501 0 6.0773C0 6.62958 0.447715 7.0773 1 7.0773H5.07666V11.1545C5.07666 11.7068 5.52438 12.1545 6.07666 12.1545C6.62894 12.1545 7.07666 11.7068 7.07666 11.1545V7.0773H11.1545C11.7068 7.0773 12.1545 6.62958 12.1545 6.0773C12.1545 5.52501 11.7068 5.0773 11.1545 5.0773H7.07666V1Z"
-              fill="url(#paint0_linear_4071_5331)" />
-            <defs>
-              <linearGradient id="paint0_linear_4071_5331" x1="6.07726" y1="0" x2="6.07726" y2="12.1545"
-                gradientUnits="userSpaceOnUse">
-                <stop stop-color="#6CA5FC" />
-                <stop offset="1" stop-color="#094FB8" />
-              </linearGradient>
-            </defs>
-          </svg>
+      <div class="page__headline">
+        <img class="icon" src="images/tablet.svg" alt="Медіа канали">
+        <h5 class="page__headline-h5">Медіа канали</h5>
+        <button class="icon__button button--add" id="addChannel">
+          <img class="icon__button-img" src="images/add.svg" alt="додати канал">
         </button>
       </div>
 
@@ -227,9 +212,8 @@
         </div>
       </div>
 
-      <div class="offers offers--chanels">
-
-        <div class="page__buttons page__buttons--chanels">
+      <div class="offers offers--channels">
+        <div class="page__buttons page__buttons--channels">
           <button class="button button--light">Медіа канали</button>
           <div class="page__buttons-container">
             <button class="button button--light account__buttons-search" id="addOffer">
@@ -246,7 +230,7 @@
 
           <div class="offers__container offers__container--full offers--active offers__head">
             <div class="offers__top">
-              <h5 class="offers__top-title page__label offers__top-title--white">
+              <h5 class="offers__top-title page__label offers__label offers__top-title--white">
                 UID
 
                 <img class="icon__downWhite" src="images/downSmall.svg" alt="sort">
@@ -298,12 +282,12 @@
           </div>
 
           <div class="offers__container offers__container--active offers__container--full">
-            <div class="offers__top offers__top--chanels">
-              <h5 class="offers__top-title page__label page__mobile">
+            <div class="offers__top offers__top--channels">
+              <h5 class="offers__top-title offers__top-title--channels page__mobile">
                 Статус
               </h5>
 
-              <img class="offers__logo page__desktop" src="images/chanel.png" alt="лого медіа каналу">
+              <img class="offers__logo page__desktop" src="images/channel.png" alt="лого медіа каналу">
 
               <div class="offers__top-settings offers__top-settings--mobile">
                 <button class="icon__button" id="editOffer">
@@ -315,18 +299,18 @@
                 </button>
 
                 <button class="icon__button" id="deleteOffer">
-                  <img class="icon__button-img" src="images/crown.svg" alt="обране">
+                  <img class="icon__button-img icon__button-img--crown" src="images/crown.svg" alt="обране">
                 </button>
               </div>
             </div>
 
-            <img class="offers__logo page__mobile" src="images/chanel.png" alt="лого медіа каналу">
+            <img class="offers__logo page__mobile" src="images/channel.png" alt="лого медіа каналу">
 
             <div class="offers__wrapper">
-              <div class="page__label offers__label">
+              <div class="page__label offers__label offers__label--channels">
                 Назва
               </div>
-              <div class="page__value offers__value offers__value--chanels offers__value--creators">
+              <div class="page__value offers__value--channels offers__value--creators">
                 Кріейтори
               </div>
               <div class="offers__value-subtitle">
@@ -335,34 +319,34 @@
             </div>
 
             <div class="offers__wrapper">
-              <div class="page__label offers__label">
+              <div class="page__label  offers__label--channels">
                 Посилання
               </div>
-              <div class="page__value offers__value offers__value--chanels">
+              <div class="page__value offers__value offers__value--channels">
                 wordwall.net
               </div>
             </div>
 
             <div class="offers__wrapper">
-              <div class="page__label offers__label">
+              <div class="page__label  offers__label--channels">
                 Підписники
               </div>
-              <div class="page__value offers__value offers__value--chanels">
+              <div class="page__value offers__value offers__value--channels">
                 20 989
               </div>
             </div>
 
             <div class="offers__wrapper">
-              <div class="page__label offers__label">
+              <div class="page__label  offers__label--channels">
                 Перегляди
               </div>
-              <div class="page__value offers__value offers__value--chanels">
+              <div class="page__value offers__value offers__value--channels">
                 9 897
               </div>
             </div>
 
             <div class="select">
-              <select class="page__label offers__label offers__label-payout select__select">
+              <select class="page__label offers__label-payout select__select">
                 <option value="CPL">CPM</option>
                 <option value="CPL">CPH</option>
               </select>
@@ -374,130 +358,21 @@
             </div>
 
             <div class="offers__wrapper">
-              <div class="page__label offers__label">
+              <div class="page__label  offers__label--channels">
                 Ціна
               </div>
-              <div class="page__value offers__value offers__value--chanels">
+              <div class="page__value offers__value offers__value--channels">
                 32 700
               </div>
             </div>
 
-            <div class="page__label offers__label">
+            <div class="page__label  offers__label--channels">
               Payout
             </div>
 
             <div class="offers__payout">
-              <button class="button offers__payout-btn offers__payout-btn--active">CPM</button>
-              <button class="button offers__payout-btn">CPH</button>
-            </div>
-
-            <div class="offers__top-settings offers__top-settings--desktop">
-              <button class="icon__button" id="editOffer">
-                <img class="icon__button-img" src="images/reject.svg" alt="відхилити">
-              </button>
-
-              <button class="icon__button" id="deleteOffer">
-                <img class="icon__button-img" src="images/done.svg" alt="прийняти">
-              </button>
-
-              <button class="icon__button" id="deleteOffer">
-                <img class="icon__button-img" src="images/crown.svg" alt="обране">
-              </button>
-            </div>
-          </div>
-
-          <div class="offers__container offers__container--active offers__container--full">
-            <div class="offers__top offers__top--chanels">
-              <h5 class="offers__top-title page__label page__mobile">
-                Статус
-              </h5>
-
-              <img class="offers__logo page__desktop" src="images/chanel.png" alt="лого медіа каналу">
-
-              <div class="offers__top-settings offers__top-settings--mobile">
-                <button class="icon__button" id="editOffer">
-                  <img class="icon__button-img" src="images/reject.svg" alt="відхилити">
-                </button>
-
-                <button class="icon__button" id="deleteOffer">
-                  <img class="icon__button-img" src="images/done.svg" alt="прийняти">
-                </button>
-
-                <button class="icon__button" id="deleteOffer">
-                  <img class="icon__button-img" src="images/crown.svg" alt="обране">
-                </button>
-              </div>
-            </div>
-
-            <img class="offers__logo page__mobile" src="images/chanel.png" alt="лого медіа каналу">
-
-            <div class="offers__wrapper">
-              <div class="page__label offers__label">
-                Назва
-              </div>
-              <div class="page__value offers__value offers__value--chanels offers__value--creators">
-                Кріейтори
-              </div>
-              <div class="offers__value-subtitle">
-                Ком’юніті українських АІ-крінйторів
-              </div>
-            </div>
-
-            <div class="offers__wrapper">
-              <div class="page__label offers__label">
-                Посилання
-              </div>
-              <div class="page__value offers__value offers__value--chanels">
-                wordwall.net
-              </div>
-            </div>
-
-            <div class="offers__wrapper">
-              <div class="page__label offers__label">
-                Підписники
-              </div>
-              <div class="page__value offers__value offers__value--chanels">
-                20 989
-              </div>
-            </div>
-
-            <div class="offers__wrapper">
-              <div class="page__label offers__label">
-                Перегляди
-              </div>
-              <div class="page__value offers__value offers__value--chanels">
-                9 897
-              </div>
-            </div>
-
-            <div class="select">
-              <select class="page__label offers__label offers__label-payout select__select">
-                <option value="CPL">CPM</option>
-                <option value="CPL">CPH</option>
-              </select>
-              <svg class="icon__downWhite icon__downWhite--payout select__arrow" width="15" height="8"
-                viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.81055 1L7.10344 6.29289C7.49396 6.68342 8.12713 6.68342 8.51765 6.29289L13.8105 1"
-                  stroke-width="2" stroke-linecap="round" />
-              </svg>
-            </div>
-
-            <div class="offers__wrapper">
-              <div class="page__label offers__label">
-                Ціна
-              </div>
-              <div class="page__value offers__value offers__value--chanels">
-                32 700
-              </div>
-            </div>
-
-            <div class="page__label offers__label">
-              Payout
-            </div>
-
-            <div class="offers__payout">
-              <button class="button offers__payout-btn offers__payout-btn--active">CPM</button>
-              <button class="button offers__payout-btn">CPH</button>
+              <button class="button offers__payout-btn--channels offers__payout-btn--active">CPM</button>
+              <button class="button offers__payout-btn--channels">CPH</button>
             </div>
 
             <div class="offers__top-settings offers__top-settings--desktop">
@@ -516,12 +391,12 @@
           </div>
 
           <div class="offers__container offers__container--full">
-            <div class="offers__top offers__top--chanels">
-              <h5 class="offers__top-title page__label page__mobile">
+            <div class="offers__top offers__top--channels">
+              <h5 class="offers__top-title offers__top-title--channels page__mobile">
                 Статус
               </h5>
 
-              <img class="offers__logo page__desktop" src="images/chanel.png" alt="лого медіа каналу">
+              <img class="offers__logo page__desktop" src="images/channel.png" alt="лого медіа каналу">
 
               <div class="offers__top-settings offers__top-settings--mobile">
                 <button class="icon__button" id="editOffer">
@@ -533,18 +408,18 @@
                 </button>
 
                 <button class="icon__button" id="deleteOffer">
-                  <img class="icon__button-img" src="images/crown.svg" alt="обране">
+                  <img class="icon__button-img icon__button-img--crown" src="images/crown.svg" alt="обране">
                 </button>
               </div>
             </div>
 
-            <img class="offers__logo page__mobile" src="images/chanel.png" alt="лого медіа каналу">
+            <img class="offers__logo page__mobile" src="images/channel.png" alt="лого медіа каналу">
 
             <div class="offers__wrapper">
-              <div class="page__label offers__label">
+              <div class="page__label offers__label offers__label--channels">
                 Назва
               </div>
-              <div class="page__value offers__value offers__value--chanels offers__value--creators">
+              <div class="page__value offers__value--channels offers__value--creators">
                 Кріейтори
               </div>
               <div class="offers__value-subtitle">
@@ -553,34 +428,34 @@
             </div>
 
             <div class="offers__wrapper">
-              <div class="page__label offers__label">
+              <div class="page__label  offers__label--channels">
                 Посилання
               </div>
-              <div class="page__value offers__value offers__value--chanels">
+              <div class="page__value offers__value offers__value--channels">
                 wordwall.net
               </div>
             </div>
 
             <div class="offers__wrapper">
-              <div class="page__label offers__label">
+              <div class="page__label  offers__label--channels">
                 Підписники
               </div>
-              <div class="page__value offers__value offers__value--chanels">
+              <div class="page__value offers__value offers__value--channels">
                 20 989
               </div>
             </div>
 
             <div class="offers__wrapper">
-              <div class="page__label offers__label">
+              <div class="page__label  offers__label--channels">
                 Перегляди
               </div>
-              <div class="page__value offers__value offers__value--chanels">
+              <div class="page__value offers__value offers__value--channels">
                 9 897
               </div>
             </div>
 
             <div class="select">
-              <select class="page__label offers__label offers__label-payout select__select">
+              <select class="page__label offers__label-payout select__select">
                 <option value="CPL">CPM</option>
                 <option value="CPL">CPH</option>
               </select>
@@ -592,21 +467,21 @@
             </div>
 
             <div class="offers__wrapper">
-              <div class="page__label offers__label">
+              <div class="page__label  offers__label--channels">
                 Ціна
               </div>
-              <div class="page__value offers__value offers__value--chanels">
+              <div class="page__value offers__value offers__value--channels">
                 32 700
               </div>
             </div>
 
-            <div class="page__label offers__label">
+            <div class="page__label  offers__label--channels">
               Payout
             </div>
 
             <div class="offers__payout">
-              <button class="button offers__payout-btn offers__payout-btn--active">CPM</button>
-              <button class="button offers__payout-btn">CPH</button>
+              <button class="button offers__payout-btn--channels offers__payout-btn--active">CPM</button>
+              <button class="button offers__payout-btn--channels">CPH</button>
             </div>
 
             <div class="offers__top-settings offers__top-settings--desktop">
@@ -624,6 +499,223 @@
             </div>
           </div>
 
+          <div class="offers__container offers__container--full">
+            <div class="offers__top offers__top--channels">
+              <h5 class="offers__top-title offers__top-title--channels page__mobile">
+                Статус
+              </h5>
+
+              <img class="offers__logo page__desktop" src="images/channel.png" alt="лого медіа каналу">
+
+              <div class="offers__top-settings offers__top-settings--mobile">
+                <button class="icon__button" id="editOffer">
+                  <img class="icon__button-img" src="images/reject.svg" alt="відхилити">
+                </button>
+
+                <button class="icon__button" id="deleteOffer">
+                  <img class="icon__button-img" src="images/done.svg" alt="прийняти">
+                </button>
+
+                <button class="icon__button" id="deleteOffer">
+                  <img class="icon__button-img icon__button-img--crown" src="images/crown.svg" alt="обране">
+                </button>
+              </div>
+            </div>
+
+            <img class="offers__logo page__mobile" src="images/channel.png" alt="лого медіа каналу">
+
+            <div class="offers__wrapper">
+              <div class="page__label offers__label offers__label--channels">
+                Назва
+              </div>
+              <div class="page__value offers__value--channels offers__value--creators">
+                Кріейтори
+              </div>
+              <div class="offers__value-subtitle">
+                Ком’юніті українських АІ-крінйторів
+              </div>
+            </div>
+
+            <div class="offers__wrapper">
+              <div class="page__label  offers__label--channels">
+                Посилання
+              </div>
+              <div class="page__value offers__value offers__value--channels">
+                wordwall.net
+              </div>
+            </div>
+
+            <div class="offers__wrapper">
+              <div class="page__label  offers__label--channels">
+                Підписники
+              </div>
+              <div class="page__value offers__value offers__value--channels">
+                20 989
+              </div>
+            </div>
+
+            <div class="offers__wrapper">
+              <div class="page__label  offers__label--channels">
+                Перегляди
+              </div>
+              <div class="page__value offers__value offers__value--channels">
+                9 897
+              </div>
+            </div>
+
+            <div class="select">
+              <select class="page__label offers__label-payout select__select">
+                <option value="CPL">CPM</option>
+                <option value="CPL">CPH</option>
+              </select>
+              <svg class="icon__downWhite icon__downWhite--payout select__arrow" width="15" height="8"
+                viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.81055 1L7.10344 6.29289C7.49396 6.68342 8.12713 6.68342 8.51765 6.29289L13.8105 1"
+                  stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+
+            <div class="offers__wrapper">
+              <div class="page__label  offers__label--channels">
+                Ціна
+              </div>
+              <div class="page__value offers__value offers__value--channels">
+                32 700
+              </div>
+            </div>
+
+            <div class="page__label  offers__label--channels">
+              Payout
+            </div>
+
+            <div class="offers__payout">
+              <button class="button offers__payout-btn--channels offers__payout-btn--active">CPM</button>
+              <button class="button offers__payout-btn--channels">CPH</button>
+            </div>
+
+            <div class="offers__top-settings offers__top-settings--desktop">
+              <button class="icon__button" id="editOffer">
+                <img class="icon__button-img" src="images/reject.svg" alt="відхилити">
+              </button>
+
+              <button class="icon__button" id="deleteOffer">
+                <img class="icon__button-img" src="images/done.svg" alt="прийняти">
+              </button>
+
+              <button class="icon__button" id="deleteOffer">
+                <img class="icon__button-img" src="images/crown.svg" alt="обране">
+              </button>
+            </div>
+          </div>
+
+          <div class="offers__container offers__container--full">
+            <div class="offers__top offers__top--channels">
+              <h5 class="offers__top-title offers__top-title--channels page__mobile">
+                Статус
+              </h5>
+
+              <img class="offers__logo page__desktop" src="images/channel.png" alt="лого медіа каналу">
+
+              <div class="offers__top-settings offers__top-settings--mobile">
+                <button class="icon__button" id="editOffer">
+                  <img class="icon__button-img" src="images/reject.svg" alt="відхилити">
+                </button>
+
+                <button class="icon__button" id="deleteOffer">
+                  <img class="icon__button-img" src="images/done.svg" alt="прийняти">
+                </button>
+
+                <button class="icon__button" id="deleteOffer">
+                  <img class="icon__button-img icon__button-img--crown" src="images/crown.svg" alt="обране">
+                </button>
+              </div>
+            </div>
+
+            <img class="offers__logo page__mobile" src="images/channel.png" alt="лого медіа каналу">
+
+            <div class="offers__wrapper">
+              <div class="page__label offers__label offers__label--channels">
+                Назва
+              </div>
+              <div class="page__value offers__value--channels offers__value--creators">
+                Кріейтори
+              </div>
+              <div class="offers__value-subtitle">
+                Ком’юніті українських АІ-крінйторів
+              </div>
+            </div>
+
+            <div class="offers__wrapper">
+              <div class="page__label  offers__label--channels">
+                Посилання
+              </div>
+              <div class="page__value offers__value offers__value--channels">
+                wordwall.net
+              </div>
+            </div>
+
+            <div class="offers__wrapper">
+              <div class="page__label  offers__label--channels">
+                Підписники
+              </div>
+              <div class="page__value offers__value offers__value--channels">
+                20 989
+              </div>
+            </div>
+
+            <div class="offers__wrapper">
+              <div class="page__label  offers__label--channels">
+                Перегляди
+              </div>
+              <div class="page__value offers__value offers__value--channels">
+                9 897
+              </div>
+            </div>
+
+            <div class="select">
+              <select class="page__label offers__label-payout select__select">
+                <option value="CPL">CPM</option>
+                <option value="CPL">CPH</option>
+              </select>
+              <svg class="icon__downWhite icon__downWhite--payout select__arrow" width="15" height="8"
+                viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.81055 1L7.10344 6.29289C7.49396 6.68342 8.12713 6.68342 8.51765 6.29289L13.8105 1"
+                  stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+
+            <div class="offers__wrapper">
+              <div class="page__label  offers__label--channels">
+                Ціна
+              </div>
+              <div class="page__value offers__value offers__value--channels">
+                32 700
+              </div>
+            </div>
+
+            <div class="page__label  offers__label--channels">
+              Payout
+            </div>
+
+            <div class="offers__payout">
+              <button class="button offers__payout-btn--channels offers__payout-btn--active">CPM</button>
+              <button class="button offers__payout-btn--channels">CPH</button>
+            </div>
+
+            <div class="offers__top-settings offers__top-settings--desktop">
+              <button class="icon__button" id="editOffer">
+                <img class="icon__button-img" src="images/reject.svg" alt="відхилити">
+              </button>
+
+              <button class="icon__button" id="deleteOffer">
+                <img class="icon__button-img" src="images/done.svg" alt="прийняти">
+              </button>
+
+              <button class="icon__button" id="deleteOffer">
+                <img class="icon__button-img" src="images/crown.svg" alt="обране">
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -639,8 +731,8 @@
 
     <div class="shadow"></div>
 
-    <!--#region formAddChanel-->
-    <div class="form" id="formAddChanel">
+    <!--#region formAddChannel-->
+    <div class="form" id="formAddChannel">
       <form action="" class="form__container">
         <h5 class="form__title">Додати новий канал</h5>
 
@@ -658,8 +750,8 @@
 
         <label class="form__label page__regular" for="price">Модель нарахування</label>
 
-        <div class="offers__payout offers__payout--inForm">
-          <button class="button offers__payout-btn offers__payout-btn--chanels popUpCPH">
+        <div class="form__payout">
+          <button class="button offers__payout-btn--channels popUpCPH">
             CPH
             <svg class="select__arrow select__arrow--popUp" width="15" height="8" viewBox="0 0 15 8" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -668,7 +760,7 @@
             </svg>
           </button>
 
-          <button class="button offers__payout-btn offers__payout-btn--chanels popUpCPM">
+          <button class="button offers__payout-btn--channels popUpCPM">
             CPM
             <svg class="select__arrow select__arrow--popUp" width="15" height="8" viewBox="0 0 15 8" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -686,8 +778,8 @@
     </div>
     <!--#endregion -->
 
-    <!--#region formEditChanel-->
-    <div class="form" id="formEditChanel">
+    <!--#region formEditChannel-->
+    <div class="form" id="formEditChannel">
       <form action="" class="form__container">
         <h5 class="form__title">Редагувати канал</h5>
 
@@ -707,8 +799,8 @@
 
         <label class="form__label page__regular" for="price">Модель нарахування</label>
 
-        <div class="offers__payout offers__payout--inForm">
-          <button class="button offers__payout-btn offers__payout-btn--chanels popUpCPH">
+        <div class="form__payout">
+          <button class="button offers__payout-btn--channels popUpCPH">
             CPH
             <svg class="select__arrow select__arrow--popUp" width="15" height="8" viewBox="0 0 15 8" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -717,7 +809,7 @@
             </svg>
           </button>
 
-          <button class="button offers__payout-btn offers__payout-btn--chanels popUpCPM">
+          <button class="button offers__payout-btn--channels popUpCPM">
             CPM
             <svg class="select__arrow select__arrow--popUp" width="15" height="8" viewBox="0 0 15 8" fill="none"
               xmlns="http://www.w3.org/2000/svg">

@@ -65,12 +65,11 @@
     width: calc(100vw - 86px);
     flex-shrink: 0;
     box-sizing: border-box;
-    // position: relative;
     height: min-content;
 
     @include onTablet {
       padding: 32px;
-      width: calc(100vw - 32px);
+      width: calc(100vw - 130px);
     }
 
     @include onDesktop {
@@ -84,6 +83,7 @@
       gap: 10px;
 
       &--active {
+
         .page__label,
         .offers__value,
         .offers__value-subtitle,
@@ -104,13 +104,14 @@
 
     &--full {
       width: calc(100vw - 16px);
+
       @include onDesktop {
         grid-template-columns: 1fr 2.5fr 2fr 2fr 1fr 1fr 1fr 1fr;
       }
     }
   }
 
-  &--chanels {
+  &--channels {
     margin-bottom: 15px;
 
     @include onTablet {
@@ -150,10 +151,11 @@
   &__top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 24px;
 
     @include onTablet {
-      margin-bottom: 50px;
+      margin-bottom: 5px;
     }
 
     @include onDesktop {
@@ -162,10 +164,21 @@
 
     &-title {
       position: relative;
+      font-size: 19px;
+      line-height: 1.3em;
       margin: 0;
 
-      &--white {
-        color: $textWhite;
+      @include onTablet {
+        font-size: 27px;
+      }
+
+      &--channels {
+        font-size: 16px;
+        font-weight: 400;
+
+        @include onTablet {
+          font-size: 45px;
+        }
       }
     }
 
@@ -208,6 +221,15 @@
         }
       }
     }
+
+    &--channels {
+      margin-bottom: 18px;
+
+      @include onTablet {
+        font-size: 45px;
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__wrapper {
@@ -241,6 +263,16 @@
 
   &__label {
     width: max-content;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-bottom: 3px;
+    color: var(--text--white);
+
+    @include onTablet {
+      font-size: 27px;
+      margin-bottom: 10px;
+    }
 
     &-payout {
       display: none;
@@ -258,20 +290,31 @@
         margin: 0;
       }
 
-      &--chanels {
+      &--channels {
         @include onDesktop {
           margin: 0;
         }
       }
+    }
 
+    &--channels {
+      @include onTablet {
+        font-size: 45px;
+      }
     }
   }
 
   &__value {
     margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3em;
+    margin-bottom: 16px;
+    color: var(--text--white);
 
     @include onTablet {
-      margin-bottom: 50px;
+      margin-bottom: 20px;
+      font-size: 25px;
     }
 
     @include onDesktop {
@@ -281,9 +324,9 @@
     }
 
     &-subtitle {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 400;
-      line-height: 14.1px;
+      line-height: 1.3em;
       color: var(--text--white);
 
 
@@ -297,10 +340,11 @@
       }
     }
 
-    &--chanels {
+    &--channels {
       margin-bottom: 14px;
 
       @include onTablet {
+        font-size: 35px;
         margin-bottom: 30px;
       }
 
@@ -312,6 +356,10 @@
     &-subtitle {
       margin-bottom: 14px;
 
+      @include onTablet {
+        margin-bottom: 30px;
+      }
+
       @include onDesktop {
         margin-bottom: 0;
       }
@@ -321,7 +369,7 @@
       margin: 0;
 
       @include onTablet {
-        margin-bottom: 8px;
+        margin-bottom: 0;
       }
 
       @include onDesktop {
@@ -330,7 +378,7 @@
     }
   }
 
-  &--chanels {
+  &--channels {
     margin-top: 8px;
     padding-bottom: 1px;
 
@@ -358,31 +406,53 @@
   }
 
   &__payout {
-    margin: 22px 0 0;
+    margin: 22px -10px 0;
+    gap: initial;
+
+    @include onTablet {
+      padding-bottom: 0;
+    }
 
     @include onDesktop {
       display: none;
     }
 
-    &--inForm {
-      margin: 0 -10px 22px;
-    }
-
     &-btn {
       background-color: #181A1E;
-      padding: 10px 15px;
+      padding: 10px 12px;
       font-size: 12px;
       font-weight: 400;
       line-height: 1.3em;
       position: relative;
       height: min-content;
+      flex-shrink: 1;
+
+      @include onTablet {
+        font-size: 21px;
+        padding: 20px 36px;
+      }
+
+      // &--small {
+      //   padding: 10px 16px;
+
+      //   @include onTablet {
+      //     padding: 20px;
+      //   }
+      // }
+
+
+      &--channels {
+        font-size: 14px;
+        background-color: #181A1E;
+        position: relative;
+
+        @include onTablet {
+          font-size: 21px;
+        }
+      }
 
       &--active {
         background: #3334FF;
-      }
-
-      &--chanels {
-        font-size: 16px;
       }
 
       &--arrow {

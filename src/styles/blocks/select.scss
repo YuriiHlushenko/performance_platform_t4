@@ -1,0 +1,82 @@
+.select {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: min-content;
+
+  &__select {
+    color: var(--text--white);
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    text-align: center;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    background-color: var(--bg--box);
+    left: -50%;
+    padding: 10px 4px;
+    list-style: none;
+    text-align: center;
+    border-radius: 20px;
+    transform: translateX(calc(50% - 4px));
+    z-index: 3;
+
+    @extend %shadow;
+
+    & li {
+      position: relative;
+      cursor: pointer;
+      padding: 10px 12px;
+      border-radius: 20px;
+      color: var(--text--white);
+    }
+
+    &--active {
+      background-color: var(--items--active);
+      color: var(--text--black);
+    }
+  }
+
+  &__arrow {
+    display: none;
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    stroke: $textWhite;
+    pointer-events: none;
+
+    @include onTablet {
+      width: 13px;
+      height: 7px;
+    }
+
+    @include onDesktop {
+      display: block;
+    }
+
+    &--popUp {
+      display: initial;
+    }
+  }
+
+  &__dropDown {
+    margin: 12px 0;
+
+    @include onTablet {
+      margin: 17px 0;
+    }
+  }
+}

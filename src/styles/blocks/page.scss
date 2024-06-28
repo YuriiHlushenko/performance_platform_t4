@@ -61,6 +61,10 @@
   &__container {
     margin: 0 20px;
 
+    @include onTablet {
+      margin: 0 30px;
+    }
+
     &--grid {
       @include onDesktop {
         display: grid;
@@ -82,7 +86,7 @@
   &__content {
     position: relative;
 
-    &--chanels {
+    &--channels {
       @include onDesktop {
         box-sizing: border-box;
         flex-grow: 1;
@@ -118,7 +122,7 @@
     gap: 7px;
 
     @include onTablet {
-      padding: 16px 16px 24px 16px;
+      padding: 16px 0 24px;
     }
 
     @include onDesktop {
@@ -136,7 +140,7 @@
       }
     }
 
-    &--chanels {
+    &--channels {
       display: none;
       padding: 36px 0;
 
@@ -180,7 +184,7 @@
   &__title {
     font-size: 32px;
     font-weight: 500;
-    line-height: 37.6px;
+    line-height: 1.3em;
     text-align: left;
     background: linear-gradient(90deg, #E5F0FF 0%, #608BFE 53%, #2D29FF 100%);
     -webkit-background-clip: text;
@@ -188,13 +192,13 @@
     -webkit-text-fill-color: transparent;
     margin: 45px 20px 40px;
 
-    @include onDesktop {
-      display: none;
+    @include onTablet {
+      margin: 24px 30px;
+      font-size: 51px;
     }
 
-    @include onTablet {
-      padding: 40px 0;
-      margin-top: 8px;
+    @include onDesktop {
+      display: none;
     }
 
     &-span {
@@ -243,7 +247,7 @@
     color: var(--text--white);
 
     @include onTablet {
-      font-size: 45.47px;
+      font-size: 45px;
       margin-bottom: 12px;
     }
 
@@ -265,7 +269,7 @@
 
     @include onTablet {
       margin-bottom: 24px;
-      font-size: 35.13px;
+      font-size: 35px;
     }
 
     @include onDesktop {
@@ -346,74 +350,4 @@
   bottom: 0;
   background-color: #000;
   opacity: 0.3;
-}
-
-.select {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: min-content;
-
-  &__select {
-    color: var(--text--white);
-    position: relative;
-    appearance: none;
-    border: none;
-    outline: none;
-    text-align: center;
-
-    &:focus {
-      border: none;
-      outline: none;
-    }
-  }
-
-  &__options {
-    position: absolute;
-    margin: 0;
-    top: 0;
-    background-color: var(--bg--box);
-    left: -50%;
-    padding: 10px 4px;
-    list-style: none;
-    text-align: center;
-    border-radius: 20px;
-    transform: translateX(calc(50% - 4px));
-    z-index: 3;
-
-    @extend %shadow;
-
-    & li {
-      position: relative;
-      cursor: pointer;
-      padding: 10px 12px;
-      border-radius: 20px;
-      color: var(--text--white);
-    }
-
-    &--active {
-      background-color: var(--items--active);
-      color: var(--text--black);
-    }
-  }
-
-  &__arrow {
-    display: none;
-    position: absolute;
-    width: 10px;
-    height: 6px;
-    bottom: 4px;
-    left: 50%;
-    transform: translateX(-50%);
-    stroke: $textWhite;
-    pointer-events: none;
-
-    @include onDesktop {
-      display: block;
-    }
-
-    &--popUp {
-      display: initial;
-    }
-  }
 }

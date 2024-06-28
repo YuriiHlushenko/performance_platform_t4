@@ -35,6 +35,10 @@
 
   &--main {
     margin: 0 30px 30px;
+
+    @include onTablet {
+      margin-bottom: 45px;
+    }
   }
 
   &__container {

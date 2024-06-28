@@ -21,7 +21,26 @@
   &__container {
     background: none;
     width: calc(100vw - 16px);
-    padding: 0;
+    padding: 20px 0 25px;
+    position: relative;
+
+    &::after {
+      @extend %after;
+      background: var(--bg--box);
+      top: 0;
+      left: 0;
+      right: 0;
+
+      height: 100%;
+      z-index: -1;
+      border-radius: 20px;
+    }
+
+    &--deployed {
+      &::after {
+        height: 305px;
+      }
+    }
 
     &-box {
       padding: 22px 0 18px;
@@ -71,13 +90,15 @@
   }
 
   &__top {
-    margin-bottom: 0;
+    margin-bottom: 5px;
 
     &-title {
-      margin-bottom: 6px;
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.3em;
+      font-weight: 500;
 
       @include onTablet {
-        margin-bottom: 12px;
+        font-size: 45px;
       }
 
       @include onDesktop {
@@ -87,14 +108,10 @@
   }
 
   &__value {
-    padding-bottom: 40px;
-
-    &:last-child {
-      padding-bottom: 15px;
-    }
+    padding-bottom: 14px;
 
     @include onTablet {
-      padding-bottom: 80px;
+      padding-bottom: 40px;
     }
 
     @include onDesktop {
@@ -102,14 +119,14 @@
       margin: 0 auto;
     }
 
-    &:last-child {
+    &:last-of-type {
       margin-bottom: 0;
     }
   }
 
   &__info {
     padding: 0 4px;
-    margin-bottom: 6px;
+    margin: 10px 0 6px;
 
     @include onTablet {
       padding: 0 8px;
@@ -167,7 +184,8 @@
 
       &--balance {
         display: block;
-        margin-top: 20px;
+        margin-top: 12px;
+        padding-bottom: 0;
 
         @include onDesktop {
           box-shadow: none;
@@ -191,6 +209,11 @@
       margin: 0;
       display: flex;
       align-items: center;
+      font-size: 22px;
+
+      @include onTablet {
+        font-size: 45px;
+      }
     }
 
     &-buttons {
@@ -210,7 +233,7 @@
 
       &-add {
         @include circle(21px);
-        margin: auto auto auto 13px ;
+        margin: auto auto auto 13px;
       }
     }
 
@@ -279,7 +302,6 @@
     @include onDesktop {
       display: none;
     }
-
   }
 
   &__roll {

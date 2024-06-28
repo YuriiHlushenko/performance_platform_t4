@@ -22,6 +22,14 @@
       @include onDesktop {
         @include square(26px);
       }
+
+      &--crown {
+        @include square(23px);
+
+        @include onTablet {
+          @include square(46px);
+        }
+      }
     }
 
     &--down {

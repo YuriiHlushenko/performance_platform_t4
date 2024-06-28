@@ -36,9 +36,11 @@ rolls.forEach((r, i) => r.addEventListener("click", () => {
   if (infos[i].style.display === 'block') {
     infos[i].style.display = 'none';
     r.innerHTML = 'Розгорнути';
+    containers[i + 1].classList.remove('users__container--deployed')
   } else {
     infos[i].style.display = 'block';
     r.innerHTML = 'Згорнути';
+    containers[i + 1].classList.add('users__container--deployed')
   }
 }));
 

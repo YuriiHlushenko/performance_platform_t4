@@ -1,16 +1,16 @@
 'use strict';
 
 const buttonsClose = document.querySelectorAll(".button--cancel");
-const formAddChanel = document.getElementById("formAddChanel");
+const formAddChanel = document.getElementById("formAddChannel");
 const shadow = document.querySelector(".shadow");
-const buttonAddChanel = document.getElementById("addChanel");
+const buttonAddChanel = document.getElementById("addChannel");
 const forms = document.querySelectorAll(".form");
-const buttonsEditChanel = document.querySelectorAll(".EditChanel");
+const buttonsEditChanel = document.querySelectorAll(".editOffer");
 const buttonEditProfile = document.getElementById("editProfile");
 const buttonDeleteProfile = document.getElementById("deleteProfile");
 
 const formEditProfile = document.getElementById("formEditProfile");
-const formEditChanel = document.getElementById("formEditChanel");
+const formEditChanel = document.getElementById("formEditChannel");
 const formDeleteProfile = document.getElementById("formDeleteProfile");
 
 buttonAddChanel.addEventListener("click", () => {
@@ -46,7 +46,6 @@ buttonAddChanel.addEventListener("click", () => {
   shadow.style.transform = "none";
   formAddChanel.style.transform = "none";
 });
-
 
 buttonsClose.forEach(btn => btn.addEventListener("click", () => {
   shadow.style.transform = "scale(0)";
