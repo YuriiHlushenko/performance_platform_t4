@@ -92,7 +92,6 @@
                 d="M5.00391 34.8736C6.59195 32.1249 8.87537 29.8425 11.6248 28.2557C14.3742 26.6688 17.4928 25.8335 20.6673 25.8335C23.8418 25.8335 26.9604 26.669 29.7098 28.2558C32.4592 29.8427 34.7426 32.1252 36.3306 34.874"
                 stroke-width="2.06667" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-
             Менеджер
           </a>
         </li>
@@ -202,7 +201,7 @@
 
     <div class="page__content">
       <!--#region main -->
-      <main class="main">
+      <main class="main main--main">
 
         <h2 class="page__title">Welcome,
           <span class="page__ttitle-span">Mariia!</span>
@@ -230,94 +229,96 @@
           </div>
         </div>
 
-        <div class="page__container">
-          <button class="main__addCard addCard">
-            <div class="main__addCard-container">
-              <div class="main__addCard-label">Add Card</div>
+        <div class="main__grid">
+          <div class="page__container">
+            <button class="main__addCard addCard">
+              <div class="main__addCard-container">
+                <div class="main__addCard-label">Add Card</div>
 
-              <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32.375 12.3335V14.2606H4.625V12.3335C4.625 9.25016 6.16667 7.7085 9.25 7.7085H27.75C30.8333 7.7085 32.375 9.25016 32.375 12.3335ZM32.375 16.5731V24.6668C32.375 27.7502 30.8333 29.2918 27.75 29.2918H9.25C6.16667 29.2918 4.625 27.7502 4.625 24.6668V16.5731H32.375ZM16.5729 23.1252C16.5729 22.4869 16.0549 21.9689 15.4167 21.9689H10.7917C10.1534 21.9689 9.63542 22.4869 9.63542 23.1252C9.63542 23.7634 10.1534 24.2814 10.7917 24.2814H15.4167C16.0549 24.2814 16.5729 23.7634 16.5729 23.1252Z"
-                  fill="white" />
-              </svg>
+                <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M32.375 12.3335V14.2606H4.625V12.3335C4.625 9.25016 6.16667 7.7085 9.25 7.7085H27.75C30.8333 7.7085 32.375 9.25016 32.375 12.3335ZM32.375 16.5731V24.6668C32.375 27.7502 30.8333 29.2918 27.75 29.2918H9.25C6.16667 29.2918 4.625 27.7502 4.625 24.6668V16.5731H32.375ZM16.5729 23.1252C16.5729 22.4869 16.0549 21.9689 15.4167 21.9689H10.7917C10.1534 21.9689 9.63542 22.4869 9.63542 23.1252C9.63542 23.7634 10.1534 24.2814 10.7917 24.2814H15.4167C16.0549 24.2814 16.5729 23.7634 16.5729 23.1252Z"
+                    fill="white" />
+                </svg>
+              </div>
+
+              <div class="main__addCard-plus">
+                <svg class="main__addCard-plus-svg" width="13" height="13" viewBox="0 0 13 13" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M7.07666 1C7.07666 0.447715 6.62894 0 6.07666 0C5.52438 0 5.07666 0.447715 5.07666 1V5.0773H1C0.447715 5.0773 0 5.52501 0 6.0773C0 6.62958 0.447715 7.0773 1 7.0773H5.07666V11.1545C5.07666 11.7068 5.52438 12.1545 6.07666 12.1545C6.62894 12.1545 7.07666 11.7068 7.07666 11.1545V7.0773H11.1545C11.7068 7.0773 12.1545 6.62958 12.1545 6.0773C12.1545 5.52501 11.7068 5.0773 11.1545 5.0773H7.07666V1Z"
+                    fill="url(#paint0_linear_4071_5331)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_4071_5331" x1="6.07726" y1="0" x2="6.07726" y2="12.1545"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#6CA5FC" />
+                      <stop offset="1" stop-color="#094FB8" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </button>
+
+            <div class="graph">
+              <div class="graph__bg"></div>
+              <div class="graph__container">
+                <div class="graph__container-axis"></div>
+                <div class="graph__container-bar">601,78</div>
+              </div>
+              <div class="graph__container">
+                <div class="graph__container-axis"></div>
+                <div class="graph__container-bar graph__container-bar--2">3002,49</div>
+              </div>
+              <div class="graph__container">
+                <div class="graph__container-axis"></div>
+                <div class="graph__container-bar graph__container-bar--3">216</div>
+              </div>
+              <div class="graph__container">
+                <div class="graph__container-axis"></div>
+                <div class="graph__container-bar graph__container-bar--4">212</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info info--main">
+            <div class="info__container">
+              <h6 class="info__title">Індекс</h6>
+              <p class="info__value">601,78</p>
             </div>
 
-            <div class="main__addCard-plus">
-              <svg class="main__addCard-plus-svg" width="13" height="13" viewBox="0 0 13 13" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M7.07666 1C7.07666 0.447715 6.62894 0 6.07666 0C5.52438 0 5.07666 0.447715 5.07666 1V5.0773H1C0.447715 5.0773 0 5.52501 0 6.0773C0 6.62958 0.447715 7.0773 1 7.0773H5.07666V11.1545C5.07666 11.7068 5.52438 12.1545 6.07666 12.1545C6.62894 12.1545 7.07666 11.7068 7.07666 11.1545V7.0773H11.1545C11.7068 7.0773 12.1545 6.62958 12.1545 6.0773C12.1545 5.52501 11.7068 5.0773 11.1545 5.0773H7.07666V1Z"
-                  fill="url(#paint0_linear_4071_5331)" />
-                <defs>
-                  <linearGradient id="paint0_linear_4071_5331" x1="6.07726" y1="0" x2="6.07726" y2="12.1545"
-                    gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#6CA5FC" />
-                    <stop offset="1" stop-color="#094FB8" />
-                  </linearGradient>
-                </defs>
-              </svg>
+            <div class="info__container">
+              <h6 class="info__title">Зачислення</h6>
+              <p class="info__value">3002,49</p>
             </div>
-          </button>
 
-          <div class="graph">
-            <div class="graph__bg"></div>
-            <div class="graph__container">
-              <div class="graph__container-axis"></div>
-              <div class="graph__container-bar">601,78</div>
+            <div class="info__container">
+              <h6 class="info__title">Бюджет</h6>
+              <p class="info__value">216</p>
             </div>
-            <div class="graph__container">
-              <div class="graph__container-axis"></div>
-              <div class="graph__container-bar graph__container-bar--2">3002,49</div>
+
+            <div class="info__container">
+              <h6 class="info__title">Сповіщення</h6>
+              <p class="info__value">212</p>
             </div>
-            <div class="graph__container">
-              <div class="graph__container-axis"></div>
-              <div class="graph__container-bar graph__container-bar--3">216</div>
+          </div>
+
+          <div class="main__container">
+            <button class="button button--light">Особистий баланс</button>
+
+
+            <div class="main__balance">
+              <h6 class="main__balance-title">Баланс</h6>
+              <div class="main__balance-value">$85,400.00</div>
             </div>
-            <div class="graph__container">
-              <div class="graph__container-axis"></div>
-              <div class="graph__container-bar graph__container-bar--4">212</div>
+            <div class="page__buttons">
+              <button id="withdraw" class="button button--balance withdraw">Вивести баланс</button>
+              <button id="topUp" class="button button--balance topUp">Поповнити баланс</button>
             </div>
           </div>
         </div>
-
-        <div class="info info--main">
-          <div class="info__container">
-            <h6 class="info__title">Індекс</h6>
-            <p class="info__value">601,78</p>
-          </div>
-
-          <div class="info__container">
-            <h6 class="info__title">Зачислення</h6>
-            <p class="info__value">3002,49</p>
-          </div>
-
-          <div class="info__container">
-            <h6 class="info__title">Бюджет</h6>
-            <p class="info__value">216</p>
-          </div>
-
-          <div class="info__container">
-            <h6 class="info__title">Сповіщення</h6>
-            <p class="info__value">212</p>
-          </div>
-        </div>
-
-        <div class="main__container">
-          <button class="button button--light">Особистий баланс</button>
-
-
-          <div class="main__balance">
-            <h6 class="main__balance-title">Баланс</h6>
-            <div class="main__balance-value">$85,400.00</div>
-          </div>
-          <div class="page__buttons">
-            <button id="withdraw" class="button button--balance withdraw">Вивести баланс</button>
-            <button id="topUp" class="button button--balance topUp">Поповнити баланс</button>
-          </div>
-        </div>
+      </main>
     </div>
 
-    </main>
     <!--#endregion -->
 
     <div class="shadow"></div>

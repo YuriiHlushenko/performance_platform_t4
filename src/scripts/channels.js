@@ -29,10 +29,10 @@ buttonsClose.forEach(btn => btn.addEventListener("click", () => {
   formEditChannel.style.transform = "scale(0)";
 }));
 
-channels.forEach(c => c.addEventListener("click", () => {
-  shadow.style.transform = "none";
-  formEditChannel.style.transform = "none";
-}));
+// channels.forEach(c => c.addEventListener("click", () => {
+//   shadow.style.transform = "none";
+//   formEditChannel.style.transform = "none";
+// }));
 
 
 window.addEventListener('hashchange', () => {

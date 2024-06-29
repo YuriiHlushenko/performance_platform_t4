@@ -171,7 +171,7 @@
 
       <div class="info users__info info--manager">
         <div class="info__container">
-          <h6 class="info__title">Ліди</h6>
+          <h6 class="info__title">Індекс</h6>
           <p class="info__value">601,78</p>
           <button class="icon__button users__info-icon">
             <img src="images/change.png" alt="change">
@@ -179,7 +179,7 @@
         </div>
 
         <div class="info__container">
-          <h6 class="info__title">Списання</h6>
+          <h6 class="info__title">Зачислення</h6>
           <p class="info__value">3002,49</p>
           <button class="icon__button users__info-icon">
             <img src="images/change.png" alt="change">
@@ -187,7 +187,7 @@
         </div>
 
         <div class="info__container">
-          <h6 class="info__title">Approve</h6>
+          <h6 class="info__title">Бюджет</h6>
           <p class="info__value">216</p>
           <button class="icon__button users__info-icon">
             <img src="images/change.png" alt="change">
@@ -199,14 +199,6 @@
           <p class="info__value">212</p>
           <button class="icon__button users__info-icon">
             <img src="images/change.png" alt="change">
-          </button>
-        </div>
-
-        <div class="info__container">
-          <h6 class="info__title">Баланс</h6>
-          <p class="info__value">216</p>
-          <button class="icon__button users__info-icon">
-            <img src="images/settings.png" alt="change">
           </button>
         </div>
       </div>
@@ -314,7 +306,7 @@
       <div class="offers__slider">
         <div class="offers offers--channels">
           <div class="offers__scroll">
-            <div class="offers__container offers__head">
+            <div class="offers__head offers__head--manager offers__container offers__container--manager">
               <div class="offers__top">
                 <h5 class="offers__top-title page__label offers__top-title--white">
                   UID
@@ -367,7 +359,7 @@
               </div>
             </div>
 
-            <div class="offers__container">
+            <div class="offers__container offers__container--manager">
               <div class="offers__top">
                 <h5 class="offers__top-title page__label offers__wrapper">
                   <span>UID</span> 112 <span>Статус</span>
@@ -453,10 +445,10 @@
                 <button class="button offers__payout-btn--small offers__payout-btn offers__payout-btn--active">
                   RevShare
                 </button>
-                <button class="button offers__payout-btn">CPL</button>
-                <button class="button offers__payout-btn">CPC</button>
-                <button class="button offers__payout-btn">CPM</button>
-                <button class="button offers__payout-btn">CPH</button>
+                <button class="button offers__payout-btn offers__payout-btn--small">CPC</button>
+                <button class="button offers__payout-btn offers__payout-btn--small">CPM</button>
+                <button class="button offers__payout-btn offers__payout-btn--small">CPH</button>
+                <button class="button offers__payout-btn offers__payout-btn--small">CPL</button>
               </div>
 
               <div class="offers__top-settings offers__top-settings--desktop">
@@ -470,7 +462,7 @@
               </div>
             </div>
 
-            <div class="offers__container">
+            <div class="offers__container offers__container--manager">
               <div class="offers__top">
                 <h5 class="offers__top-title page__label offers__wrapper">
                   <span>UID</span> 112 <span>Статус</span>
@@ -553,11 +545,13 @@
               </div>
 
               <div class="page__buttons offers__payout">
-                <button class="button offers__payout-btn offers__payout-btn--small offers__payout-btn--active">RevShare</button>
-                <button class="button offers__payout-btn">CPL</button>
-                <button class="button offers__payout-btn">CPC</button>
-                <button class="button offers__payout-btn">CPM</button>
-                <button class="button offers__payout-btn">CPH</button>
+                <button class="button offers__payout-btn--small offers__payout-btn offers__payout-btn--active">
+                  RevShare
+                </button>
+                <button class="button offers__payout-btn offers__payout-btn--small">CPC</button>
+                <button class="button offers__payout-btn offers__payout-btn--small">CPM</button>
+                <button class="button offers__payout-btn offers__payout-btn--small">CPH</button>
+                <button class="button offers__payout-btn offers__payout-btn--small">CPL</button>
               </div>
 
               <div class="offers__top-settings offers__top-settings--desktop">
@@ -571,7 +565,7 @@
               </div>
             </div>
 
-            <div class="offers__container offers__container--active">
+            <div class="offers__container offers__container--manager offers__container--active">
               <div class="offers__top">
                 <h5 class="offers__top-title page__label offers__wrapper">
                   <span>UID</span> 112 <span>Статус</span>
@@ -654,213 +648,13 @@
               </div>
 
               <div class="page__buttons offers__payout">
-                <button class="button offers__payout-btn offers__payout-btn--small offers__payout-btn--active">RevShare</button>
-                <button class="button offers__payout-btn">CPL</button>
-                <button class="button offers__payout-btn">CPC</button>
-                <button class="button offers__payout-btn">CPM</button>
-                <button class="button offers__payout-btn">CPH</button>
-              </div>
-
-              <div class="offers__top-settings offers__top-settings--desktop">
-                <button class="icon__button editOffer">
-                  <img class="icon__button-img" src="images/settings.png" alt="Видалити">
+                <button class="button offers__payout-btn--small offers__payout-btn offers__payout-btn--active">
+                  RevShare
                 </button>
-
-                <button class="icon__button" id="deleteOffer">
-                  <img class="icon__button--bin" src="images/bin.svg" alt="Видалити">
-                </button>
-              </div>
-            </div>
-
-            <div class="offers__container">
-              <div class="offers__top">
-                <h5 class="offers__top-title page__label offers__wrapper">
-                  <span>UID</span> 112 <span>Статус</span>
-                </h5>
-
-                <div class="offers__top-settings offers__top-settings--mobile">
-                  <button class="icon__button editOffer">
-                    <img class="icon__button-img" src="images/settings.png" alt="Редагувати">
-                  </button>
-
-                  <button class="icon__button" id="deleteOffer">
-                    <img class="icon__button--bin" src="images/bin.svg" alt="Видалити">
-                  </button>
-                </div>
-              </div>
-
-              <div class="offers__wrapper">
-                <div class="page__label offers__label">
-                  Назва
-                </div>
-                <div class="page__value offers__value">
-                  Mithlesha Kumara Singha
-                </div>
-
-              </div>
-
-              <div class="offers__wrapper">
-                <div class="page__label offers__label">
-                  Посилання
-                </div>
-                <div class="page__value offers__value">
-                  wordwall.net
-                </div>
-              </div>
-
-              <div class="offers__wrapper">
-                <div class="page__label offers__label">
-                  Бренд
-                </div>
-                <div class="page__value offers__value">
-                  Kritipur, Kathmandu
-                </div>
-              </div>
-
-              <div class="offers__wrapper">
-                <div class="page__label offers__label">
-                  Виплати
-                </div>
-                <div class="page__value offers__value">
-                  $122
-                </div>
-              </div>
-
-              <div class="select">
-                <select class="page__label offers__label offers__label-payout select__select">
-                  <option value="RevShare">RevShare</option>
-                  <option value="CPL">CPL</option>
-                  <option value="CPC">CPC</option>
-                  <option value="CPL">CPM</option>
-                  <option value="CPL">CPH</option>
-                </select>
-                <svg class="icon__downWhite icon__downWhite--payout select__arrow" width="15" height="8"
-                  viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.81055 1L7.10344 6.29289C7.49396 6.68342 8.12713 6.68342 8.51765 6.29289L13.8105 1"
-                    stroke-width="2" stroke-linecap="round" />
-                </svg>
-              </div>
-
-              <div class="offers__wrapper">
-                <div class="page__label offers__label">
-                  Баланс
-                </div>
-                <div class="page__value offers__value">
-                  $1489
-                </div>
-              </div>
-
-              <div class="page__label offers__label page__mobile">
-                Payout
-              </div>
-
-              <div class="page__buttons offers__payout">
-                <button class="button offers__payout-btn offers__payout-btn--active">RevShare</button>
-                <button class="button offers__payout-btn">CPL</button>
-                <button class="button offers__payout-btn">CPC</button>
-                <button class="button offers__payout-btn">CPM</button>
-                <button class="button offers__payout-btn">CPH</button>
-              </div>
-
-              <div class="offers__top-settings offers__top-settings--desktop">
-                <button class="icon__button editOffer">
-                  <img class="icon__button-img" src="images/settings.png" alt="Видалити">
-                </button>
-
-                <button class="icon__button" id="deleteOffer">
-                  <img class="icon__button--bin" src="images/bin.svg" alt="Видалити">
-                </button>
-              </div>
-            </div>
-
-            <div class="offers__container">
-              <div class="offers__top">
-                <h5 class="offers__top-title page__label offers__wrapper">
-                  <span>UID</span> 112 <span>Статус</span>
-                </h5>
-
-                <div class="offers__top-settings offers__top-settings--mobile">
-                  <button class="icon__button editOffer">
-                    <img class="icon__button-img" src="images/settings.png" alt="Видалити">
-                  </button>
-
-                  <button class="icon__button" id="deleteOffer">
-                    <img class="icon__button--bin" src="images/bin.svg" alt="Видалити">
-                  </button>
-                </div>
-              </div>
-
-              <div class="offers__wrapper">
-                <div class="page__label offers__label">
-                  Назва
-                </div>
-                <div class="page__value offers__value">
-                  Mithlesha Kumara Singha
-                </div>
-
-              </div>
-
-              <div class="offers__wrapper">
-                <div class="page__label offers__label">
-                  Посилання
-                </div>
-                <div class="page__value offers__value">
-                  wordwall.net
-                </div>
-              </div>
-
-              <div class="offers__wrapper">
-                <div class="page__label offers__label">
-                  Бренд
-                </div>
-                <div class="page__value offers__value">
-                  Kritipur, Kathmandu
-                </div>
-              </div>
-
-              <div class="offers__wrapper">
-                <div class="page__label offers__label">
-                  Виплати
-                </div>
-                <div class="page__value offers__value">
-                  $122
-                </div>
-              </div>
-
-              <div class="select">
-                <select class="page__label offers__label offers__label-payout select__select">
-                  <option value="RevShare">RevShare</option>
-                  <option value="CPL">CPL</option>
-                  <option value="CPC">CPC</option>
-                  <option value="CPL">CPM</option>
-                  <option value="CPL">CPH</option>
-                </select>
-                <svg class="icon__downWhite icon__downWhite--payout select__arrow" width="15" height="8"
-                  viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.81055 1L7.10344 6.29289C7.49396 6.68342 8.12713 6.68342 8.51765 6.29289L13.8105 1"
-                    stroke-width="2" stroke-linecap="round" />
-                </svg>
-              </div>
-
-              <div class="page__label offers__label page__mobile">
-                Payout
-              </div>
-
-              <div class="offers__wrapper">
-                <div class="page__label offers__label">
-                  Баланс
-                </div>
-                <div class="page__value offers__value">
-                  $1489
-                </div>
-              </div>
-
-              <div class="page__buttons offers__payout">
-                <button class="button offers__payout-btn offers__payout-btn--active">RevShare</button>
-                <button class="button offers__payout-btn">CPL</button>
-                <button class="button offers__payout-btn">CPC</button>
-                <button class="button offers__payout-btn">CPM</button>
-                <button class="button offers__payout-btn">CPH</button>
+                <button class="button offers__payout-btn offers__payout-btn--small">CPC</button>
+                <button class="button offers__payout-btn offers__payout-btn--small">CPM</button>
+                <button class="button offers__payout-btn offers__payout-btn--small">CPH</button>
+                <button class="button offers__payout-btn offers__payout-btn--small">CPL</button>
               </div>
 
               <div class="offers__top-settings offers__top-settings--desktop">

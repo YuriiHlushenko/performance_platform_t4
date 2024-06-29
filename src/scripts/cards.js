@@ -7,7 +7,7 @@ const cards = document.querySelectorAll(".main__cards-container");
 let current = 0;
 
 function scale() {
-  cards.forEach((c) => {
+  cards.forEach(c => {
     c.style.transform = "scale(0.9)";
     c.style.width = '55vw';
   });
@@ -15,7 +15,17 @@ function scale() {
   cards[current].style.transform = 'none';
 }
 
-scale();
+if (window.innerWidth < 1280) {
+  scale();
+}
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth < 1280) {
+    scale();
+  } else {
+    cards.forEach(c => c.style.width = '382px');
+  }
+})
 
 function scroll() {
   sliderLine.style.transform = `translateX(-${

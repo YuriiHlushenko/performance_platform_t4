@@ -6,6 +6,19 @@
     margin: 0 auto;
   }
 
+  &--main {
+    @include onDesktop {
+      max-width: initial;
+    }
+  }
+
+  &__grid {
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
   &__container {
     padding: 0 12px;
 
@@ -20,9 +33,7 @@
 
   &__slider {
     position: relative;
-
     margin-bottom: 40px;
-
 
     @include onTablet {
       margin-bottom: 42px;
@@ -44,8 +55,6 @@
     transition: all $duration;
     padding-left: 16vw;
 
-    // padding: 0 70px;
-
     @include onDesktop {
       width: 100%;
       display: flex;
@@ -60,8 +69,8 @@
 
       @include onDesktop {
         padding: 0;
-        width: initial;
-        flex-shrink: 1;
+        // flex-shrink: 1;
+        width: 382px;
       }
     }
 
@@ -75,7 +84,7 @@
       display: block;
       flex-shrink: 0;
       flex-grow: 1;
-      background-color: var(--bg--box);
+      background-color: #181A1E;
       border-radius: 20px;
       border: none;
       height: calc(100vw * 0.38);
@@ -84,6 +93,7 @@
 
       @include onDesktop {
         @include square(218px);
+        transform: none;
       }
     }
   }
@@ -98,6 +108,10 @@
     padding: 0;
     width: 100%;
     margin-bottom: 40px;
+
+    @include onDesktop {
+      display: none;
+    }
 
     &-container {
       display: flex;
@@ -155,7 +169,7 @@
     @include onTablet {
       margin: 24px;
       padding: 62px 0 82px 40px;
-
+      box-sizing: border-box;
     }
 
     @include onDesktop {
@@ -178,7 +192,7 @@
       @include onDesktop {
         font-size: 24px;
         line-height: 32px;
-        letter-spacing: -0.02em;
+        margin-bottom: 66px;
       }
     }
 

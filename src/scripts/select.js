@@ -73,6 +73,7 @@ selectors.forEach((s, i) =>
     const select = s.children[0];
     const dropDown = document.createElement("ul");
     dropDown.className = "select__options";
+    const arrow = selectorContainers[i].querySelector("svg");
 
     [...s.children].forEach((option) => {
       const dropDownOption = document.createElement("li");
@@ -88,10 +89,14 @@ selectors.forEach((s, i) =>
         select.dispatchEvent(new Event("change"));
         s.dispatchEvent(new Event("change"));
         dropDown.remove();
+        arrow.style.transform = "translateX(-50%)";
+        selectorContainers[i].appendChild(arrow);
       });
 
       dropDown.appendChild(dropDownOption);
     });
+    arrow.style.transform = "rotate(180deg) translateX(50%)";
+    dropDown.appendChild(arrow);
 
     selectorContainers[i].appendChild(dropDown);
   })

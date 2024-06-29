@@ -132,5 +132,16 @@
 
   &__roll {
     display: none;
+
+    &--desktop {
+      @include onDesktop {
+        display: none;
+        height: 130px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
   }
 }

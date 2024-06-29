@@ -3,7 +3,7 @@
 const href = window.location.href;
 const items = document.querySelectorAll(".menu__link");
 
-const list = ["manager", "users", "chanels", "offers", "profile", "balance", "support"];
+const list = ["manager", "users", "channels", "offers", "profile", "balance", "support"];
 
 for (let i = 0; i < list.length; i++) {
   if (href.includes(list[i])) {

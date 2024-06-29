@@ -22,6 +22,7 @@ const formAddTransacrion = document.getElementById("formAddTransacrion");
 const formChangePayment = document.getElementById("formChangePayment");
 const shadow = document.querySelector(".shadow");
 const buttonsChangePayment = document.querySelectorAll(".changePayment");
+const infosDesktop = document.querySelectorAll(".users__info--desktop");
 
 ['Balance', 'Notification', 'Debiting', 'Lids', 'Payment', 'Offer', 'Approve'].forEach(w => {
   document.querySelectorAll(`.edit${w}`).forEach(b => {
@@ -43,6 +44,18 @@ rolls.forEach((r, i) => r.addEventListener("click", () => {
     containers[i + 1].classList.add('users__container--deployed')
   }
 }));
+
+if (window.innerWidth > 1280) {
+containers.forEach((c, i) => c.addEventListener("click", () => {
+  if (infos[i - 1].style.display === 'block') {
+    infos[i - 1].style.display = 'none';
+    containers[i].classList.remove('users__container--open')
+  } else {
+    infos[i - 1].style.display = 'block';
+    containers[i].classList.add('users__container--open')
+  }
+}));
+}
 
 addButtons.forEach(b => b.addEventListener("click", () => {
   shadow.style.transform = "none";
