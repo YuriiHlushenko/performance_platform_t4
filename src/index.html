@@ -14,8 +14,8 @@
 
 <body class="page__body">
 
-  <!--#region login -->
-  <div class="login">
+  <!--#region SingUp -->
+  <div class="login login--singUp">
     <div class="login__header">
       <div class="login__logo">
         <img src="images/logo.svg" alt="Neurolide" class="login__logo-img">
@@ -23,7 +23,6 @@
       </div>
     </div>
 
-    <!--#region form-->
     <div class="form login__form" id="formSingUp">
       <form action="" class="form__container login__form-container">
         <h5 class="form__title login__title">Реєстрація</h5>
@@ -36,24 +35,97 @@
         <label class="form__label login__label" for="nameLogin">Ім’я</label>
         <input class="form__input login__form-input" type="text" id="nameLogin" placeholder="..." required>
 
-        <label class="form__label login__label" for="emailLogin">Email</label>
-        <input class="form__input login__form-input" type="email" id="emailLogin" placeholder="...">
+        <label class="form__label login__label" for="emailLogin">E-mail</label>
+        <input class="form__input login__form-input" type="email" id="emailLogin" placeholder="mail@simmmple.com">
 
         <label class="form__label login__label" for="passwordLogin">Пароль</label>
-        <input class="form__input login__form-input" type="password" id="passwordLogin" placeholder="...">
+        <input class="form__input login__form-input" type="password" id="passwordLogin" placeholder="Пароль">
+
+        <button class="login__label-eye">
+          <svg class="login__label-eye-svg" width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.33268 2.41667C12.491 2.41667 15.3077 4.19167 16.6827 7C15.3077 9.80833 12.4993 11.5833 9.33268 11.5833C6.16602 11.5833 3.35768 9.80833 1.98268 7C3.35768 4.19167 6.17435 2.41667 9.33268 2.41667ZM9.33268 0.75C5.16602 0.75 1.60768 3.34167 0.166016 7C1.60768 10.6583 5.16602 13.25 9.33268 13.25C13.4993 13.25 17.0577 10.6583 18.4993 7C17.0577 3.34167 13.4993 0.75 9.33268 0.75ZM9.33268 4.91667C10.4827 4.91667 11.416 5.85 11.416 7C11.416 8.15 10.4827 9.08333 9.33268 9.08333C8.18268 9.08333 7.24935 8.15 7.24935 7C7.24935 5.85 8.18268 4.91667 9.33268 4.91667ZM9.33268 3.25C7.26602 3.25 5.58268 4.93333 5.58268 7C5.58268 9.06667 7.26602 10.75 9.33268 10.75C11.3993 10.75 13.0827 9.06667 13.0827 7C13.0827 4.93333 11.3993 3.25 9.33268 3.25Z"
+              fill="#3334FF" />
+          </svg>
+        </button>
+
+        <button class="login__label-eye login__label-eye--singUp">
+          <svg class="login__label-eye-svg" width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.33268 2.41667C12.491 2.41667 15.3077 4.19167 16.6827 7C15.3077 9.80833 12.4993 11.5833 9.33268 11.5833C6.16602 11.5833 3.35768 9.80833 1.98268 7C3.35768 4.19167 6.17435 2.41667 9.33268 2.41667ZM9.33268 0.75C5.16602 0.75 1.60768 3.34167 0.166016 7C1.60768 10.6583 5.16602 13.25 9.33268 13.25C13.4993 13.25 17.0577 10.6583 18.4993 7C17.0577 3.34167 13.4993 0.75 9.33268 0.75ZM9.33268 4.91667C10.4827 4.91667 11.416 5.85 11.416 7C11.416 8.15 10.4827 9.08333 9.33268 9.08333C8.18268 9.08333 7.24935 8.15 7.24935 7C7.24935 5.85 8.18268 4.91667 9.33268 4.91667ZM9.33268 3.25C7.26602 3.25 5.58268 4.93333 5.58268 7C5.58268 9.06667 7.26602 10.75 9.33268 10.75C11.3993 10.75 13.0827 9.06667 13.0827 7C13.0827 4.93333 11.3993 3.25 9.33268 3.25Z"
+              fill="#3334FF" />
+          </svg>
+        </button>
 
         <label class="form__label login__label" for="passwordLogin2">Повторіть пароль</label>
-        <input class="form__input login__form-input" type="password" id="passwordLogin2" placeholder="...">
+        <input class="form__input login__form-input" type="password" id="passwordLogin2" placeholder="Пароль">
 
-        <div class="login__form-checkbox">
-          <input checked type="checkbox" id="checkbox" class="login__form-checkbox-input">
-          <label class="login__form-checkbox-label" for="checkbox">Запам’ятати дані</label>
+        <div class="login__form-checkbox login__form-checkbox--subtitle">
+          <div class="login__form-checkbox-box">
+            <input checked type="checkbox" id="checkbox" class="login__form-checkbox-input">
+            <label class="login__form-checkbox-label" for="checkbox">Запам’ятати дані</label>
+          </div>
+        </div>
+
+        <div class="login__subtitle page__desktop">© 2022 Horizon UI. All Rights Reserved. Made with love by Simmmple!
         </div>
 
         <button type="submit" id="login" class="button form__buttons-add login__button-add">Зареєструватися</button>
       </form>
     </div>
-    <!--#endregion -->
+  </div>
+  <!--#endregion -->
+
+  <!--#region login -->
+  <div class="login">
+    <div class="login__header">
+      <div class="login__logo">
+        <img src="images/logo.svg" alt="Neurolide" class="login__logo-img">
+        <h1 class="login__logo-title">Neurolide</h1>
+      </div>
+    </div>
+
+    <div class="form login__form" id="formlogin">
+      <form action="" class="form__container login__form-container">
+        <h5 class="form__title login__title login__title--login">Вхід до акаунту</h5>
+        <div class="login__subtitle login__subtitle--login">Введіть e-mail та пароль для входу в аккаунт !</div>
+
+        <div class="login__buttons">
+          <button id="affiliat" class="button login__button">Аффіліат</button>
+          <button id="brend" class="button login__button login__button--active">Бренд</button>
+        </div>
+
+        <label class="form__label login__label" for="emailLogin">E-mail</label>
+        <input class="form__input login__form-input" type="email" id="emailLogin" placeholder="mail@simmmple.com">
+
+        <label class="form__label login__label" for="passwordLogin">Пароль</label>
+        <input class="form__input login__form-input" type="password" id="passwordLogin"
+          placeholder="Мінімально 8 символів ">
+
+        <button class="login__label-eye">
+          <svg class="login__label-eye-svg" width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M9.33268 2.41667C12.491 2.41667 15.3077 4.19167 16.6827 7C15.3077 9.80833 12.4993 11.5833 9.33268 11.5833C6.16602 11.5833 3.35768 9.80833 1.98268 7C3.35768 4.19167 6.17435 2.41667 9.33268 2.41667ZM9.33268 0.75C5.16602 0.75 1.60768 3.34167 0.166016 7C1.60768 10.6583 5.16602 13.25 9.33268 13.25C13.4993 13.25 17.0577 10.6583 18.4993 7C17.0577 3.34167 13.4993 0.75 9.33268 0.75ZM9.33268 4.91667C10.4827 4.91667 11.416 5.85 11.416 7C11.416 8.15 10.4827 9.08333 9.33268 9.08333C8.18268 9.08333 7.24935 8.15 7.24935 7C7.24935 5.85 8.18268 4.91667 9.33268 4.91667ZM9.33268 3.25C7.26602 3.25 5.58268 4.93333 5.58268 7C5.58268 9.06667 7.26602 10.75 9.33268 10.75C11.3993 10.75 13.0827 9.06667 13.0827 7C13.0827 4.93333 11.3993 3.25 9.33268 3.25Z"
+              fill="#3334FF" />
+          </svg>
+        </button>
+
+        <div class="login__form-checkbox login__form-checkbox--login">
+          <div class="login__form-checkbox-box">
+            <input checked type="checkbox" id="checkbox" class="login__form-checkbox-input">
+            <label class="login__form-checkbox-label" for="checkbox">Запам’ятати дані</label>
+          </div>
+          <label class="login__form-checkbox-label login__form-checkbox-label--colored" for="checkbox">Забули
+            пароль?</label>
+        </div>
+
+        <button type="submit" id="login"
+          class="button form__buttons-add login__button-add login__button-add--login">Увійти</button>
+
+        <div class="login__subtitle page__desktop">© 2022 Horizon UI. All Rights Reserved. Made with love by Simmmple!
+        </div>
+      </form>
+    </div>
   </div>
   <!--#endregion -->
 

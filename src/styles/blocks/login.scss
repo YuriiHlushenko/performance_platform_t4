@@ -7,7 +7,12 @@
   top: 0;
   bottom: 0;
   background-color: #0A0A0A;
-  display: none;
+  // display: none;
+
+
+  &--singUp {
+    display: none;
+  }
 
   &__header {
     background-image: url(/images/loginMobile.png);
@@ -26,24 +31,84 @@
   }
 
   &__title {
-    font-size: 26px;
+    font-size: 22px;
 
     @include onTablet {
       font-size: 41px;
+    }
 
+    @include onDesktop {
+      margin-bottom: 50px;
+      font-family: "DM Sans", sans-serif;
+    }
+
+    &--login {
+      margin-bottom: 8px;
+
+      @include onTablet {
+        margin-bottom: 23px;
+      }
+
+      @include onDesktop {
+        margin-bottom: 10px;
+      }
     }
   }
 
   &__label {
     @include onTablet {
       font-size: 21px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+    }
+
+    &-eye {
+      display: none;
+
+      @include onDesktop {
+        display: block;
+        border: none;
+        background: none;
+        position: absolute;
+        transform: translateY(-70px);
+        right: 20px;
+      }
+
+      &--singUp {
+        transform: translateY(65px);
+      }
+    }
+  }
+
+  &__subtitle {
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3em;
+    color: #71788C;
+    margin-bottom: 16px;
+
+    @include onTablet {
+      font-size: 18px;
+    }
+
+    @include onDesktop {
+      font-size: 14px;
+      text-align: center;
+      font-weight: 500;
+      line-height: 24px;
+    }
+
+    &--login {
+      @include onDesktop {
+        margin-bottom: 50px;
+        font-size: 16px;
+      }
     }
   }
 
   &__button {
     background: none;
-    background-color: #2E65F3;
+    background-color: #3334FF;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.3em;
@@ -52,16 +117,42 @@
       font-size: 25px;
     }
 
+    @include onDesktop {
+      text-align: left;
+      padding: 20px;
+      font-size: 20px;
+      border-radius: 20px;
+    }
+
     &--active {
       background-color: #181A1E;
     }
 
     &-add {
+      display: block;
+      margin: 0 auto;
+      background: #3334FF;
+
       @include onTablet {
         display: block;
         padding: 28px 34px;
         width: 70%;
         font-size: 25px;
+      }
+
+      @include onDesktop {
+        padding: 20px;
+        font-size: 20px;
+        border-radius: 20px;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      &--login {
+        @include onDesktop {
+          margin: 50px 13px 20px 13px;
+          width: calc(100% - 26px);
+        }
       }
     }
   }
@@ -73,7 +164,13 @@
     margin-bottom: 16px;
 
     @include onTablet {
+      gap: 28px;
       margin-bottom: 20px;
+    }
+
+    @include onDesktop {
+      gap: 20px;
+      margin-bottom: 30px;
     }
   }
 
@@ -155,8 +252,12 @@
       padding: 0;
       position: relative;
       left: 25%;
-      // top: 50%;
+      top: 50%;
       transform: translateX(-50%);
+
+      @include onDesktop {
+        transform: translateX(-50%) translateY(-50%);
+      }
     }
 
     &-container {
@@ -170,6 +271,28 @@
 
     &-input {
       background: none;
+      margin-bottom: 20px;
+
+      @include onDesktop {
+        border-radius: 20px;
+        font-size: 20px;
+        padding: 20px;
+        line-height: 23.5px;
+        box-sizing: border-box;
+        margin-bottom: 30px;
+      }
+
+      &::placeholder {
+        font-size: 14px;
+
+        @include onTablet {
+          font-size: 25px;
+        }
+
+        @include onDesktop {
+          font-size: 20px;
+        }
+      }
     }
 
     &-checkbox {
@@ -177,9 +300,16 @@
       align-items: center;
       gap: 12px;
       margin-bottom: 16px;
+      justify-content: space-between;
 
       @include onTablet {
         margin-bottom: 23px;
+      }
+
+      &-box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
       }
 
       &-input {
@@ -200,12 +330,29 @@
         @include onTablet {
           font-size: 21px;
         }
+
+        &--colored {
+          color: #3334FF;
+
+          @include onDesktop {
+            margin-bottom: 50px;
+
+            transform: translateY(-10px);
+          }
+        }
+      }
+
+      &--subtitle {
+        @include onDesktop {
+          margin-bottom: 6px;
+        }
+      }
+
+      &--login {
+        @include onDesktop {
+          align-items: end;
+        }
       }
     }
-  }
-
-  &__button-add {
-    display: block;
-    margin: 0 auto;
   }
 }
