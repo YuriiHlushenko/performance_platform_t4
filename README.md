@@ -12,7 +12,7 @@ node v14.21.3
 Installation
 
 1.Clone the repo
-git clone https://github.com/YuriiHlushenko/performance_platform.git
+git clone https://github.com/YuriiHlushenko/performance_platform_t4.git
 2.Install NPM packages
 npm install
 3.Start
