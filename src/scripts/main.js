@@ -7,10 +7,14 @@ const formAddCard = document.getElementById("formAddCard");
 const formWidthraw = document.getElementById("formWithdraw");
 const formTopUp = document.getElementById("formTopUp");
 const formSingUp = document.getElementById("formSingUp");
+const formLogin = document.getElementById("formlogin");
 const buttonsWidthraw = document.querySelectorAll(".withdraw");
 const buttonsTopUp = document.querySelectorAll(".topUp");
 const buttonLogin = document.getElementById("login");
-const login = document.querySelector(".login");
+const buttonSingUp = document.getElementById("singUp");
+const login = document.querySelector(".login--login");
+const singUp = document.querySelector(".login--singUp");
+
 
 
 // ['Widthraw', 'TopUp', 'AddCard'].forEach(w => {
@@ -45,8 +49,16 @@ function stopDefAction(evt) {
 formSingUp.addEventListener(
 'submit', stopDefAction, false);
 
+formLogin.addEventListener(
+'submit', stopDefAction, false);
+
+
 buttonLogin.addEventListener("click", () => {
   login.style.display = "none";
+});
+
+buttonSingUp.addEventListener("click", () => {
+  singUp.style.display = "none";
 });
 
 
